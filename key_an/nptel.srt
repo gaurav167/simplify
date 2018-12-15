@@ -1,0 +1,1426 @@
+1
+00:00:19,420 --> 00:00:25,120
+Good morning, today we will have the first
+module of machine learning part C.
+
+2
+00:00:25,820 --> 00:00:33,000
+I will talk about hypothesis space and inductive
+bias will give you brief introduction to this,
+
+3
+00:00:33,360 --> 00:00:37,650
+so that when we talk about a different machine
+learning algorithms, we can refer to this
+
+4
+00:00:37,650 --> 00:00:38,470
+discussion.
+
+5
+00:00:38,650 --> 00:01:04,150
+So, as we have seen that in inductive learning
+or prediction, we have given a examples of data
+
+6
+00:01:08,310 --> 00:01:18,710
+And the example are of the form as we have
+seen x, y, where x for a particular instance
+
+7
+00:01:18,710 --> 00:01:26,619
+x comprises of the values of the different
+features of that instance; and y is the output attribute
+
+8
+00:01:27,580 --> 00:01:33,620
+And we can also think of that as being given
+x and f(x).
+
+9
+00:01:34,400 --> 00:01:44,479
+So, if you assume that the output of an instance
+is a function of the input vector input feature
+
+10
+00:01:44,479 --> 00:01:51,659
+vector; and this is the function that we are
+trying to learn, we are given x, f(x) pairs
+
+11
+00:01:51,899 --> 00:01:52,659
+as examples.
+
+12
+00:01:53,540 --> 00:01:56,160
+And we want to learn x.
+
+13
+00:01:56,979 --> 00:02:07,080
+For a classification problem, in the earlier
+class, we talked about two types of supervised
+
+14
+00:02:07,080 --> 00:02:14,030
+learning problems - classification and regression
+depending on whether the output attributes
+
+15
+00:02:14,030 --> 00:02:18,690
+type is discrete valued or continuous valued.
+
+16
+00:02:19,380 --> 00:02:36,360
+In classification problem, this function f(x)
+is discrete; in regression, the function f
+
+17
+00:02:36,360 --> 00:02:43,959
+(x) is continuous.
+
+18
+00:02:43,959 --> 00:02:50,080
+And we can also apart from classification
+and regression, in some cases we may want
+
+19
+00:02:50,080 --> 00:02:54,040
+to find out the probability of a particular
+value of y.
+
+20
+00:02:54,040 --> 00:03:17,860
+So, for those problems, where we look at probability
+estimation, our f(x) is the probability of
+
+21
+00:03:17,860 --> 00:03:22,760
+x; so this is the type of inductive learning
+problems that we are looking at.
+
+22
+00:03:22,760 --> 00:03:24,970
+Why do we call this inductive learning?
+
+23
+00:03:24,970 --> 00:03:32,040
+We are given some data and we are trying to
+do induction to try to identify a function,
+
+24
+00:03:32,040 --> 00:03:34,060
+which can explain the data.
+
+25
+00:03:34,060 --> 00:03:42,409
+So, induction as oppose to deduction, unless
+we can see all the instances all the possible
+
+26
+00:03:42,409 --> 00:03:50,380
+data points or we make some restrictive assumption
+about the language in which the hypothesis
+
+27
+00:03:50,380 --> 00:03:56,750
+is expressed or some bias, this problem is
+not well defined so that is why it is called
+
+28
+00:03:56,750 --> 00:04:01,430
+an inductive problem.
+
+29
+00:04:01,430 --> 00:04:08,900
+Then in the last class, we talked about features.
+
+30
+00:04:08,900 --> 00:04:16,540
+So when we say we have to learn a function,
+it is a function of the features; so instances
+
+31
+00:04:16,540 --> 00:04:23,340
+are described in terms of features.
+
+32
+00:04:23,340 --> 00:04:46,430
+So, features are properties that describe
+each instance; and each instance can be described
+
+33
+00:04:46,430 --> 00:04:49,270
+in a quantitative manner using features.
+
+34
+00:04:49,840 --> 00:05:00,060
+And often we have multiple features so we
+have what we call a feature vector, for example,
+
+35
+00:05:00,060 --> 00:05:07,010
+for a particular instance we may be or a particular
+task we may be describing all the instances
+
+36
+00:05:07,010 --> 00:05:15,000
+in terms of ten features, so the feature vector
+will be a one-dimensional vector of size 10.
+
+37
+00:05:15,000 --> 00:05:19,500
+Now, based on this we can define a features
+space.
+
+38
+00:05:20,080 --> 00:05:30,030
+Suppose, for simplicity, let us assume that
+there are two features; and we can say that
+
+39
+00:05:30,030 --> 00:05:32,450
+the features are x 1 and x 2.
+
+40
+00:05:32,880 --> 00:05:40,600
+In general, we can have n number of features
+we have two features the features define a
+
+41
+00:05:40,600 --> 00:05:47,670
+two-dimensional space if we have n features
+the define an n dimensional space if you take
+
+42
+00:05:47,670 --> 00:05:56,300
+a particular instance let us say d 1 is an
+instance and for d 1 x 1 equal to 2, x 2 equal
+
+43
+00:05:56,300 --> 00:05:56,800
+to 5.
+
+44
+00:05:59,040 --> 00:06:05,580
+So, let us say x 1 is 2 here and x 2 is 5
+here.
+
+45
+00:06:05,670 --> 00:06:15,090
+So, this is d 1 so d 1 can be thought of as
+a point in this feature space point in the
+
+46
+00:06:15,090 --> 00:06:21,050
+two dimensional feature space or you can think
+of it as a vector in this space so each instance
+
+47
+00:06:21,050 --> 00:06:23,370
+is a point in the feature space.
+
+48
+00:06:24,370 --> 00:06:28,230
+Now, let us look at a classification problem.
+
+49
+00:06:28,630 --> 00:06:35,660
+And let us say that it is a two class classification
+problem so we have given a number of instances
+
+50
+00:06:35,660 --> 00:06:41,450
+for examples some of which belong to class
+1, the others belong to class 2, so there
+
+51
+00:06:41,450 --> 00:06:43,370
+are two class classification problems.
+
+52
+00:06:43,840 --> 00:06:49,800
+We have two types of instances those belonging
+to class 1 and those belonging to class 2.
+
+53
+00:06:49,800 --> 00:06:55,440
+You are given a training set which comprises
+a subset of the instances, some of them are
+
+54
+00:06:55,440 --> 00:07:01,130
+marked class 1, some of them are marked class
+2, and we can say that class 1 is positive
+
+55
+00:07:01,130 --> 00:07:02,470
+and class 2 as negative.
+
+56
+00:07:02,700 --> 00:07:13,920
+So, we find that we can map different points
+in this feature space, let us say these are
+
+57
+00:07:13,920 --> 00:07:15,420
+the positive points.
+
+58
+00:07:20,580 --> 00:07:27,090
+And we have some other points in this feature
+space which are negative points.
+
+59
+00:07:27,090 --> 00:07:35,830
+Now, what we want to do is we want to learn
+a function, so that based on the function,
+
+60
+00:07:35,830 --> 00:07:41,410
+we want the function to predict whether a
+new instance, which is given to you.
+
+61
+00:07:41,410 --> 00:07:46,190
+Suppose, this is a new instance, which is
+given to you, we want to know whether this
+
+62
+00:07:46,190 --> 00:07:47,750
+should be positive or negative.
+
+63
+00:07:48,180 --> 00:07:55,460
+In order to do this, we have to learn a function
+or the function could be a particular curve
+
+64
+00:07:55,460 --> 00:08:00,270
+or a line, which separates the positive from
+the negative instances.
+
+65
+00:08:00,360 --> 00:08:04,880
+For example, the function that we learn could
+be this function.
+
+66
+00:08:05,820 --> 00:08:11,680
+And we can say that any point which lies to
+this side of the function is positive any
+
+67
+00:08:11,680 --> 00:08:15,390
+point which lies to this side of the function
+is negative.
+
+68
+00:08:15,390 --> 00:08:19,460
+And since this yellow point lies to the left
+of the function it is negative, so this is
+
+69
+00:08:19,460 --> 00:08:21,520
+what inductive learning is about.
+
+70
+00:08:23,480 --> 00:08:29,320
+So, let us look at the slide in this slide,
+which I have taken from a slide by Jesse Davis
+
+71
+00:08:29,330 --> 00:08:31,030
+of University of Washington.
+
+72
+00:08:31,360 --> 00:08:37,880
+We can see a feature space is described in
+terms of the positive and negative examples.
+
+73
+00:08:37,880 --> 00:08:44,300
+The green pluses are the positive points;
+the red minuses are the negative points.
+
+74
+00:08:44,300 --> 00:08:53,199
+Now this is a particular instance, for which
+x 1 is 0.5, x 2 is 2.8 and the label of this
+
+75
+00:08:53,199 --> 00:08:54,939
+instance is positive.
+
+76
+00:08:57,269 --> 00:09:00,989
+Now these question mark points are the test
+points.
+
+77
+00:09:01,500 --> 00:09:07,310
+And we are asked to find out what should be
+the class of those points may be positive
+
+78
+00:09:07,310 --> 00:09:09,490
+or negative in the prediction problem.
+
+79
+00:09:09,720 --> 00:09:16,360
+So, in order to answer the prediction problem
+we have to come up with the function, for
+
+80
+00:09:16,370 --> 00:09:22,329
+example, let us say we come up with this pink
+function pink line, and we say lines points
+
+81
+00:09:22,329 --> 00:09:27,700
+that lie to the right of the pink line is
+negative the points which lie to the left
+
+82
+00:09:27,700 --> 00:09:29,460
+of the pink line is positive.
+
+83
+00:09:31,620 --> 00:09:38,760
+In this case, this point and this point will
+be marked positive; and this point and this
+
+84
+00:09:38,760 --> 00:09:40,220
+point will be marked negative.
+
+85
+00:09:41,470 --> 00:09:47,820
+So, this pink line is the function that we
+have come up with and so this is the hypothesis
+
+86
+00:09:47,820 --> 00:09:51,080
+or function that we used to do our prediction.
+
+87
+00:09:52,310 --> 00:10:00,949
+Now, we could have instead of this particular
+line, we could have hypothesized other functions.
+
+88
+00:10:00,949 --> 00:10:06,500
+So, all these are possible functions, which
+we could have found.
+
+89
+00:10:06,500 --> 00:10:12,620
+And the set of all such legal functions that
+we could have come up with they define the
+
+90
+00:10:12,620 --> 00:10:13,700
+hypothesis space.
+
+91
+00:10:14,269 --> 00:10:20,079
+In a particular learning problem, you first
+defined the hypothesis space that is the class
+
+92
+00:10:20,079 --> 00:10:25,510
+of function that you are going to consider
+then given the data points, you try to come
+
+93
+00:10:25,510 --> 00:10:33,370
+up with the best hypothesis given the data
+that you have.
+
+94
+00:10:33,370 --> 00:10:40,749
+We have briefly talked about in the last module
+about how a function is represented so as
+
+95
+00:10:40,749 --> 00:10:48,389
+we have discussed a function is represented
+in terms of features.
+
+96
+00:10:58,460 --> 00:11:05,279
+There are two things that we need in order
+to describe a function, we have to decide
+
+97
+00:11:05,279 --> 00:11:11,740
+the features of the vocabulary, and we have
+to decide the function class or the type of
+
+98
+00:11:11,740 --> 00:11:18,040
+function or the language of the function that
+we will have to we will be using.
+
+99
+00:11:18,040 --> 00:11:27,800
+So, based on the features and the language,
+we can define our hypothesis space.
+
+100
+00:11:27,800 --> 00:11:33,860
+Various types of representations have been
+considered for making predictions.
+
+101
+00:11:33,860 --> 00:11:40,829
+For example, we just saw that we could have
+a linear function to act as a discriminator
+
+102
+00:11:40,829 --> 00:11:49,279
+between two classes, we will in a subsequent
+class, we will look at a representation by
+
+103
+00:11:49,279 --> 00:11:53,050
+using a structure, which we called a decision
+tree.
+
+104
+00:11:53,050 --> 00:12:03,220
+Where at a decision tree is a tree, where
+at every node, we take a decision based on
+
+105
+00:12:03,220 --> 00:12:06,980
+the value of an attribute.
+
+106
+00:12:06,980 --> 00:12:16,310
+And based on that, we go to different branches,
+so at every node, we make a decision based
+
+107
+00:12:16,310 --> 00:12:23,870
+on the value of an attribute and every leaf
+node is labeled by the value of y.
+
+108
+00:12:24,040 --> 00:12:31,460
+So, decision tree is a type of representation;
+linear function is one type of representation.
+
+109
+00:12:32,120 --> 00:12:38,269
+You could also have multivariate linear function
+linear function you can have neural networks.
+
+110
+00:12:38,269 --> 00:12:44,220
+These are some examples of representation
+and we have some examples in the slide here.
+
+111
+00:12:44,220 --> 00:12:53,079
+A decision tree, a linear function, a multivariate
+linear function, a single layer perceptron
+
+112
+00:12:53,079 --> 00:12:58,499
+- the basic unit of a neural network, a multi
+layer neural network; these are some of the
+
+113
+00:12:58,499 --> 00:13:03,880
+representations that we will talk about later
+in this class.
+
+114
+00:13:03,880 --> 00:13:13,379
+So, once you have chosen the features and
+the language or the class of functions, what
+
+115
+00:13:13,379 --> 00:13:16,219
+you have is a hypothesis space.
+
+116
+00:13:25,600 --> 00:13:31,180
+So, hypothesis space is the space of all legal
+hypothesis, is a set of all legal hypothesis
+
+117
+00:13:31,189 --> 00:13:39,279
+that you can describe using the features that
+you have chosen, and the language that you
+
+118
+00:13:39,279 --> 00:13:39,799
+have chosen.
+
+119
+00:13:40,879 --> 00:13:46,180
+And this is the set from which the learning
+algorithm will pick a hypothesis.
+
+120
+00:13:46,180 --> 00:13:54,999
+So, hypothesis space we may represent a hypothesis
+space by H and the learning algorithm outputs
+
+121
+00:13:54,999 --> 00:14:07,249
+a hypothesis h belonging to H, this is the
+output of a learning algorithm.
+
+122
+00:14:07,249 --> 00:14:16,490
+So, capital H denotes all legal hypothesis,
+all possible outputs by the learning algorithm.
+
+123
+00:14:16,490 --> 00:14:22,019
+Given the training set given the particular
+data points, the learning algorithm will come
+
+124
+00:14:22,019 --> 00:14:28,689
+up with one of the hypothesis in the hypothesis
+space which hypothesis it comes up with will
+
+125
+00:14:28,689 --> 00:14:36,319
+depend on the data, and it also will depend
+on what type of restrictions or biases that
+
+126
+00:14:36,319 --> 00:14:40,610
+we have imposed, which we will describe later.
+
+127
+00:14:40,610 --> 00:14:48,569
+So, supervised learning, we can think of is
+a device which explore the hypothesis space
+
+128
+00:14:48,569 --> 00:14:55,910
+or which searches the hypothesis space in
+order to find out one of the hypothesis which
+
+129
+00:14:55,910 --> 00:14:57,770
+satisfies certain criteria.
+
+130
+00:15:00,560 --> 00:15:04,680
+Now first some more terminology before we
+proceed.
+
+131
+00:15:09,509 --> 00:15:20,701
+We have already talked about an example as
+x, y the value of the input and the value
+
+132
+00:15:20,701 --> 00:15:22,741
+of the output x, y pair.
+
+133
+00:15:25,160 --> 00:15:40,079
+Training data is a set of examples 
+is a collection of a examples, which have
+
+134
+00:15:40,079 --> 00:15:45,139
+been observed by the learning algorithm or
+which is input to the learning algorithm.
+
+135
+00:15:45,139 --> 00:15:56,420
+We have instance space or feature space, which
+describes all possible instances, so if we
+
+136
+00:15:56,420 --> 00:16:06,649
+have two features x 1 and x 2; let us say
+x 1 takes value between 0 and 100, x 2 takes
+
+137
+00:16:06,649 --> 00:16:17,660
+value between 0 and 50; and all points in
+this plane can describe an instance, so this
+
+138
+00:16:17,660 --> 00:16:18,900
+is the instance space.
+
+139
+00:16:19,279 --> 00:16:32,699
+So, instance space is the set of all possible
+objects that can be described by the features.
+
+140
+00:16:32,699 --> 00:16:36,679
+And we are trying to learn a concept c.
+
+141
+00:16:36,819 --> 00:16:43,050
+Let us think of a classification problem where
+we have a particular class that we are trying
+
+142
+00:16:43,050 --> 00:16:43,610
+to learn.
+
+143
+00:16:44,050 --> 00:16:49,139
+So, let us think of a two class classification
+problem, we can define one of the classes
+
+144
+00:16:49,139 --> 00:16:54,389
+is positive, the other is negative, we can
+think of the positive examples as the concept
+
+145
+00:16:54,389 --> 00:16:56,089
+which we are trying to learn.
+
+146
+00:16:57,570 --> 00:17:03,949
+So, out of all possible objects that we can
+describe in the instance space, subsets of
+
+147
+00:17:03,949 --> 00:17:08,329
+those objects are positive that is they belong
+to the concept.
+
+148
+00:17:09,000 --> 00:17:20,880
+So, the concept c can be a subset of the instance
+space X, so which define the positive points.
+
+149
+00:17:21,709 --> 00:17:26,009
+C is unknown to us and this is what we are
+trying to find out.
+
+150
+00:17:26,170 --> 00:17:38,220
+In order to find out c, we are trying to find
+a function f, so f is what we are trying to
+
+151
+00:17:38,220 --> 00:17:38,860
+learn.
+
+152
+00:17:39,220 --> 00:17:39,900
+What is f?
+
+153
+00:17:40,220 --> 00:17:46,400
+f is a function which maps every input X to
+an output Y.
+
+154
+00:17:47,440 --> 00:17:53,960
+Now what is the difference between c and f,
+f is used to be a function used to describe
+
+155
+00:17:53,960 --> 00:18:00,680
+the concept they may be same, they may be
+different, because f is defined by the language
+
+156
+00:18:00,680 --> 00:18:02,800
+and the features that you have chosen.
+
+157
+00:18:02,800 --> 00:18:05,970
+So, this is a certain difference between f
+and c.
+
+158
+00:18:05,970 --> 00:18:17,710
+Now, what you are trying to do in learning
+is given a hypothesis space h.
+
+159
+00:18:17,710 --> 00:18:27,270
+You are trying to come up with the hypothesis
+small h belonging to the hypothesis H that
+
+160
+00:18:27,270 --> 00:18:29,320
+approximates f.
+
+161
+00:18:29,320 --> 00:18:46,270
+You want to find h that approximates f based
+on the training data that you have been given.
+
+162
+00:18:46,270 --> 00:18:54,190
+Now the set of hypothesis that can be produced
+can be restricted further by specifying a
+
+163
+00:18:54,190 --> 00:18:55,540
+language bias.
+
+164
+00:18:55,540 --> 00:19:09,870
+So, hypothesis space defines all possible
+set of hypothesis, you can restrict hypothesis
+
+165
+00:19:09,870 --> 00:19:16,890
+by defining some bias.
+
+166
+00:19:16,890 --> 00:19:26,230
+So, you can specify some constraints on the
+language or some preferences.
+
+167
+00:19:26,230 --> 00:19:37,190
+So, bias is of two types, bias can be in terms
+of constraints or the bias can be in terms
+
+168
+00:19:37,190 --> 00:19:38,930
+of preferences.
+
+169
+00:19:38,930 --> 00:19:46,150
+We will define them more precisely soon, but
+what we mean by constraints is suppose your
+
+170
+00:19:46,150 --> 00:19:54,440
+features are Boolean variables, now if you
+say that you want to consider only Boolean
+
+171
+00:19:54,440 --> 00:20:01,800
+functions, which are conjunctions of monomials,
+so that is providing a bias or the language.
+
+172
+00:20:01,800 --> 00:20:09,550
+If you say that you want a function, which
+is simpler then you are putting a preference
+
+173
+00:20:09,550 --> 00:20:10,910
+bias.
+
+174
+00:20:10,910 --> 00:20:16,140
+So, we will talk about this later.
+
+175
+00:20:16,140 --> 00:20:27,800
+So, given these definitions in a learning
+problem, the input is a training set let us
+
+176
+00:20:27,800 --> 00:20:36,000
+say S, S is a subset of the instance space,
+X is the instance space, which comprises of
+
+177
+00:20:36,000 --> 00:20:42,530
+all possible instances and the training examples
+that you are given is a subset of this.
+
+178
+00:20:42,530 --> 00:20:51,560
+And output, you are required to output, a
+hypothesis small h belonging to the hypothesis
+
+179
+00:20:51,560 --> 00:20:56,230
+space capital H, so this is for a classification
+problem.
+
+180
+00:20:56,230 --> 00:21:13,290
+So, let me rub the board before we proceed.
+
+181
+00:21:13,290 --> 00:21:29,550
+Now, let us look at hypothesis space.
+
+182
+00:21:29,550 --> 00:21:34,710
+Now suppose we look at functions just to take
+an example.
+
+183
+00:21:34,710 --> 00:21:37,790
+We take features which are Boolean.
+
+184
+00:21:37,790 --> 00:21:47,390
+Suppose, x 1, x 2, x 3, x 4 are four features,
+and they are Boolean features the value of
+
+185
+00:21:47,390 --> 00:21:49,850
+the features are true or false.
+
+186
+00:21:49,850 --> 00:22:01,270
+Now, if there are four Boolean features, and
+how many possible instances can you have,
+
+187
+00:22:01,270 --> 00:22:07,390
+in a particular instance x 1 can be true or
+false 0 or 1, x 2 can be 0 or 1, x 3 can be
+
+188
+00:22:07,390 --> 00:22:09,780
+0 or 1, x 4 can be 0 or 1.
+
+189
+00:22:09,780 --> 00:22:16,520
+So, there is 1 to the power 4 or 16 possible
+instances.
+
+190
+00:22:16,520 --> 00:22:27,100
+So, number of possible instances is 2 to the
+power 4 or 16.
+
+191
+00:22:27,100 --> 00:22:38,250
+Now how many possible function are there,
+how many Boolean functions are possible.
+
+192
+00:22:38,250 --> 00:22:51,420
+So, what is a function, a function will classify
+some of the points as positive others as negative
+
+193
+00:22:51,420 --> 00:22:59,910
+out of the 16 points, so that means the number
+of functions is the number of possible subsets
+
+194
+00:22:59,910 --> 00:23:02,250
+of this 16 instances.
+
+195
+00:23:02,250 --> 00:23:09,750
+So, how many possible subsets are there, there
+are 2 to the power 16 subsets or 2 to the
+
+196
+00:23:09,750 --> 00:23:12,610
+power 2 to the power 4 subsets.
+
+197
+00:23:12,610 --> 00:23:19,250
+Instead of 4 Boolean variables as feature,
+if you had N Boolean features, then the number
+
+198
+00:23:19,250 --> 00:23:26,890
+of possible instances will be 2 to the power
+N. And number of possible function will be
+
+199
+00:23:26,890 --> 00:23:30,090
+2 to the power 2 to the power N.
+
+200
+00:23:30,600 --> 00:23:34,040
+So, this is the size of the hypothesis space.
+
+201
+00:23:34,590 --> 00:23:42,780
+As you can see the hypothesis space is very
+large, and it is not possible to look at every
+
+202
+00:23:42,780 --> 00:23:48,500
+hypothesis individually in order to select
+the best hypothesis that you want.
+
+203
+00:23:48,500 --> 00:23:56,470
+So, what do you do you put some restrictions
+on the hypothesis space, you can put some
+
+204
+00:23:56,470 --> 00:23:57,170
+restrictions.
+
+205
+00:23:57,470 --> 00:24:01,210
+So, you select a hypothesis language.
+
+206
+00:24:04,360 --> 00:24:13,760
+So, this hypothesis language may be an unrestricted
+language, for example, all possible Boolean
+
+207
+00:24:13,760 --> 00:24:17,730
+functions or may be a restricted language.
+
+208
+00:24:17,730 --> 00:24:23,680
+We have seen already some examples of hypothesis
+languages as decision tree, linear functions,
+
+209
+00:24:23,680 --> 00:24:29,821
+neural networks etcetera or there could be
+polynomial function, linear function, or there
+
+210
+00:24:29,821 --> 00:24:37,510
+could be conjunction Boolean formulas, CNF
+Boolean formulas, unrestricted Boolean formulas
+
+211
+00:24:37,510 --> 00:24:39,750
+so you choose a hypothesis language.
+
+212
+00:24:40,560 --> 00:24:50,190
+The hypothesis language if you restrict the
+hypothesis language, the hypothesis language
+
+213
+00:24:50,190 --> 00:25:05,730
+reflects bias, so this reflects a bias or
+inductive bias of the learner.
+
+214
+00:25:19,380 --> 00:25:24,940
+Now, so let us define formally what is inductive
+bias.
+
+215
+00:25:25,410 --> 00:25:32,510
+So, when we choose a hypothesis space, we
+need to make some assumptions.
+
+216
+00:25:33,350 --> 00:25:39,290
+And there as I said there are two types of
+assumptions that you can make.
+
+217
+00:25:39,920 --> 00:25:45,920
+You can put restrictions on the type of functions
+that is you can say instead of considering
+
+218
+00:25:45,920 --> 00:25:53,160
+all Boolean formulas, we are going to consider
+only conjunctive Boolean formulas.
+
+219
+00:25:53,160 --> 00:26:01,900
+You can say that for regression problem, you
+can say that we are looking at linear functions,
+
+220
+00:26:01,900 --> 00:26:08,420
+or you can say that we can look at fourth
+degree polynomials or nth degree polynomials
+
+221
+00:26:08,420 --> 00:26:12,910
+or we can say we look as any polynomial.
+
+222
+00:26:12,910 --> 00:26:19,120
+So, specifying the form of the function is
+called restriction bias.
+
+223
+00:26:19,120 --> 00:26:24,820
+The second type of bias that you can use is
+preference bias, where given a particular
+
+224
+00:26:24,820 --> 00:26:32,560
+language that you have chosen you say that
+I am considering all possible polynomials,
+
+225
+00:26:32,560 --> 00:26:35,950
+but I will prefer polynomials of lower degree.
+
+226
+00:26:35,950 --> 00:26:42,370
+So, you can say that I am considering all
+possible Boolean functions, but I want a Boolean
+
+227
+00:26:42,370 --> 00:26:46,760
+function which can be described in small size.
+
+228
+00:26:46,760 --> 00:26:52,560
+So, you can put different types of bias on
+your learning algorithm.
+
+229
+00:26:52,560 --> 00:27:00,830
+So, inductive learning means to come up with
+the general function from training examples.
+
+230
+00:27:00,830 --> 00:27:04,230
+Given some training examples, you want to
+generalize.
+
+231
+00:27:04,230 --> 00:27:11,580
+So, you construct a hypothesis h, you are
+given some training examples which comes from
+
+232
+00:27:11,580 --> 00:27:15,820
+a concept c, and you want to find out a hypothesis
+h.
+
+233
+00:27:15,820 --> 00:27:20,320
+You can come up with the hypothesis that is
+consistence with all the training examples
+
+234
+00:27:20,320 --> 00:27:28,730
+given, then such hypothesis are called consistence
+hypothesis; it is sometimes not possible to
+
+235
+00:27:28,730 --> 00:27:33,790
+come up with the consistence hypothesis and
+sometimes we will not come up with the consistence
+
+236
+00:27:33,790 --> 00:27:34,790
+hypothesis.
+
+237
+00:27:34,790 --> 00:27:40,220
+But even when you are coming up with the consistence
+hypothesis, given a hypothesis space and given
+
+238
+00:27:40,220 --> 00:27:46,320
+a training data multiple possible consistence
+hypothesis can be there, and you have to select
+
+239
+00:27:46,320 --> 00:27:53,080
+which one of them you want to output based
+on your preference bias.
+
+240
+00:27:53,080 --> 00:27:58,960
+The hypothesis that you want to output is
+most often, you are guided by you want to
+
+241
+00:27:58,960 --> 00:28:07,010
+come up with the hypothesis that generalizes
+well over the unseen examples, you form your
+
+242
+00:28:07,010 --> 00:28:09,710
+hypothesis based on the training data.
+
+243
+00:28:09,710 --> 00:28:16,850
+But you want come up with the hypothesis that
+does not just do well on the training data,
+
+244
+00:28:16,850 --> 00:28:22,570
+but is likely to do well on unseen data.
+
+245
+00:28:22,570 --> 00:28:27,250
+Now inductive learning is an ill post problem.
+
+246
+00:28:27,250 --> 00:28:37,430
+If you do not look at all, suppose, your hypothesis
+space is all Boolean formulas, and if you
+
+247
+00:28:37,430 --> 00:28:42,800
+do not look at all the 2 to the power N possible
+examples if you look at a subset of those
+
+248
+00:28:42,800 --> 00:28:50,410
+examples multiple possible hypothesis is possible,
+and they have they will behave differently
+
+249
+00:28:50,410 --> 00:28:51,810
+with the rest of the examples.
+
+250
+00:28:51,970 --> 00:29:01,520
+So, you cannot come up with the correct hypothesis
+by logical being by you know which is which
+
+251
+00:29:01,520 --> 00:29:05,410
+is guaranteed to be true without seeing all
+the training examples.
+
+252
+00:29:05,410 --> 00:29:11,690
+So, inductive learning is a ill post problem,
+you are looking for generalization guided
+
+253
+00:29:11,690 --> 00:29:13,670
+by some bias or some criteria.
+
+254
+00:29:17,480 --> 00:29:24,400
+So, why you are being able to generalize,
+it is based on a assumption we call this assumption
+
+255
+00:29:24,400 --> 00:29:26,500
+the inductive learning hypothesis.
+
+256
+00:29:27,510 --> 00:29:35,870
+The hypothesis states that a hypothesis h
+is found to approximate the target function
+
+257
+00:29:35,870 --> 00:29:40,010
+c well over a sufficiently large set of training
+examples.
+
+258
+00:29:40,460 --> 00:29:48,800
+So, if you come up with a hypothesis which
+has a low training error over a sufficiently
+
+259
+00:29:48,800 --> 00:29:54,720
+large training set you expect that hypothesis
+to do well on unseen examples.
+
+260
+00:29:54,720 --> 00:29:59,220
+So, this is the inductive learning hypothesis.
+
+261
+00:29:59,220 --> 00:30:05,990
+And learning can be looked upon as searching
+through the hypothesis space.
+
+262
+00:30:05,990 --> 00:30:11,900
+Based on the training examples and the bias
+that you have imposed, there are different
+
+263
+00:30:11,900 --> 00:30:17,650
+types of bias for example, one classical bias
+is a bias called Occamâ€™s Razor.
+
+264
+00:30:17,650 --> 00:30:22,390
+Occamâ€™s razor states that you will prefer
+the simplest hypothesis.
+
+265
+00:30:22,390 --> 00:30:29,390
+So, this is a principle or this is a philosophical
+principle that if something can be described
+
+266
+00:30:29,390 --> 00:30:37,940
+in a short language that hypothesis is to
+be preferred over a more complex hypothesis.
+
+267
+00:30:37,940 --> 00:30:44,660
+And there are other types of inductive bias
+like minimum description length, like maximum
+
+268
+00:30:44,660 --> 00:30:51,860
+margin etcetera which will be only which can
+be explained, when we talk about the specific
+
+269
+00:30:51,860 --> 00:30:54,350
+algorithms where such biases is used.
+
+270
+00:30:54,350 --> 00:30:59,740
+So, in machine learning, you have to come
+up with a good hypothesis space, you have
+
+271
+00:30:59,740 --> 00:31:04,220
+to find an algorithm that works well with
+the hypothesis space, you have to come up
+
+272
+00:31:04,220 --> 00:31:10,050
+with the hypothesis algorithm that works well
+with the hypothesis space, and outputs on
+
+273
+00:31:10,050 --> 00:31:15,950
+hypothesis that is expected to do well over
+future data points.
+
+274
+00:31:15,950 --> 00:31:23,020
+And you have to understand what is the confidence
+that you have on the hypothesis and these
+
+275
+00:31:23,020 --> 00:31:24,820
+are the things that we will discuss.
+
+276
+00:31:25,610 --> 00:31:31,310
+So, machine learning coming up with a function
+is all about doing generalization.
+
+277
+00:31:32,550 --> 00:31:35,970
+And when you are doing generalization, you
+can make some errors.
+
+278
+00:31:36,800 --> 00:31:40,840
+And the errors are of two types, bias errors
+and variance errors.
+
+279
+00:31:40,980 --> 00:31:46,760
+So, bias as we saw is a restriction on the
+hypothesis space or the preference in choosing
+
+280
+00:31:46,760 --> 00:31:47,680
+hypothesis.
+
+281
+00:31:48,180 --> 00:31:51,700
+By deciding a particular hypothesis, you impose
+a bias.
+
+282
+00:31:52,100 --> 00:31:59,880
+So, this is error due to incorrect assumptions
+or restrictions on the hypothesis space, the
+
+283
+00:31:59,880 --> 00:32:02,840
+error introduced by that is called bias error.
+
+284
+00:32:02,840 --> 00:32:10,690
+Variance error is introduced when you have
+a small test set, so variance error means
+
+285
+00:32:10,690 --> 00:32:15,330
+the model that you estimate from different
+training sets will differ from each other.
+
+286
+00:32:15,330 --> 00:32:21,280
+If you come up with the model from some 50
+training set, 50 data points, and you take
+
+287
+00:32:21,280 --> 00:32:25,150
+another 50 data points on the distribution
+you can come up with the very different model,
+
+288
+00:32:25,150 --> 00:32:30,410
+then we say that there is a variance among
+the results.
+
+289
+00:32:31,850 --> 00:32:38,510
+And this point, we will discuss later when
+we talk about different learning algorithms.
+
+290
+00:32:38,510 --> 00:32:43,460
+This is a very important concept, but we will
+talk about it when we talk about the algorithms,
+
+291
+00:32:43,460 --> 00:32:46,520
+this is overfitting and underfitting.
+
+292
+00:32:46,520 --> 00:32:52,070
+You may come up with the hypothesis that does
+well over the training examples, but does
+
+293
+00:32:52,070 --> 00:32:57,350
+very poorly over the test examples, and then
+we say overfitting has occurred.
+
+294
+00:32:57,350 --> 00:33:01,630
+Overfitting comes from using very complex
+functions so you are using too few training
+
+295
+00:33:01,630 --> 00:33:02,290
+data.
+
+296
+00:33:03,200 --> 00:33:08,780
+And the reverse of overfitting is underfitting,
+if you have a very simple function then it
+
+297
+00:33:08,780 --> 00:33:11,770
+cannot capture all the nuances of the data.
+
+298
+00:33:11,770 --> 00:33:18,140
+So, we will talk about details of overfitting
+and underfitting when we talk about specific
+
+299
+00:33:18,140 --> 00:33:18,960
+algorithms.
+
+300
+00:33:19,140 --> 00:33:21,060
+With this, we come to the end of this module.
+
+301
+00:33:21,060 --> 00:33:21,670
+Thank you.
+
+
