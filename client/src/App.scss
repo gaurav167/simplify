@@ -1,0 +1,306 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+//// Optional
+//@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/transitions";
+@import '~antd/dist/antd.css';
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+body {
+  background-color: white;
+}
+
+.custom_layout {
+
+  min-height: 100vh;
+
+  .ant-layout-header {
+    background-color: #5D001E;
+    //position: fixed;
+    //z-index: 1;
+    width: 100%;
+
+    .logo {
+      background-size: contain;
+      background-image : url('/logo.png') ;
+      background-repeat: no-repeat;
+      height: 50px;
+      width: 100px;
+      z-index: 1000;
+      margin-left: 50px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      //margin: 16px 24px 16px 50px;
+      float: left;
+    }
+
+  }
+
+  .ant-layout-content {
+    height: 100%
+  }
+
+}
+
+
+.banner {
+  .ant-carousel .slick-slide {
+    text-align: center;
+    height: 400px;
+    line-height: 400px;
+    background: #364d79;
+    overflow: hidden;
+  }
+
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
+}
+
+.video-list {
+  .ant-list-item-meta-title {
+    margin-bottom: 0;
+  }
+
+  .flex-row {
+    display: flex;
+
+    *[class^='ant-col-'] {
+      display: flex;
+    }
+  }
+
+  .actions {
+    position: absolute;
+    bottom: 0px;
+
+    ul {
+      font-size: 0;
+      flex: 0 0 auto;
+      padding: 0;
+      list-style: none;
+
+      li:first-child {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      li {
+        display: inline-block;
+        color: rgba(0, 0, 0, .45);
+        padding: 0px 16px;
+
+        border-right: 1px solid rgba(0, 0, 0, .3);
+
+        cursor: pointer;
+        position: relative;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+.slider {
+  .ant-carousel {
+
+    height: 100%;
+
+    .slick-slider {
+      height: 100%;
+    }
+
+    .slick-list {
+      height: 100%;
+    }
+
+    .slick-track {
+      height: 100%;
+    }
+
+    .slick-slide {
+      //text-align: center;
+      height: 100%;
+      background: #364d79;
+      overflow: hidden;
+      color: #fff;
+      padding: 10px;
+
+
+      .title {
+
+      }
+
+    }
+
+
+  }
+}
+
+
+.video-player-container {
+  //display: flex;
+
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    padding: 0 20px;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    padding: 0 100px;
+
+  }
+
+
+  .sixteen-nine {
+    @include aspect-ratio(16, 9);
+    background-color: #E3E2DF;
+
+    .content {
+
+      .video {
+        margin: auto;
+        height: 100%;
+        text-align: center;
+      }
+
+      video {
+        height: 100%;
+        //margin: auto;
+      }
+    }
+
+  }
+
+  .video-player {
+    display: inline-block;
+    vertical-align: top;
+
+    $width_player: calc(100% - 400px) ;
+    width: $width_player;
+    padding-right: 25px;
+  }
+
+
+  .video-summary {
+
+    padding-top: 20px;
+
+    .title-block {
+
+    }
+
+    .summary-block {
+      font-size: 16px;
+    }
+
+  }
+
+  .video-player-sidebar {
+    display: inline-block;
+    vertical-align: top;
+
+
+    width: 400px;
+
+    .video-button-options {
+
+      *[class^='option-'] {
+        min-height: 200px;
+        margin-bottom: 10px;
+
+      }
+
+      .option-1 {
+        background-color: #E3E2DF;
+
+      }
+
+      .option-2 {
+        background-color: #bbb;
+
+      }
+
+      .option-3 {
+        background-color: #aaa;
+
+      }
+    }
+
+    .video-related-list {
+      background-color: #999999;
+      min-height: 100vh;
+    }
+
+    //background-color: #ccc;
+
+  }
+
+}
+
+
+.toc {
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .toc-heading {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .toc-body {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .ant-list-header {
+    background-color: #E3E2DF;
+    border-bottom: none;
+  }
+
+  .ant-list-item {
+    background-color: #E3E2DF;
+    border-bottom: none;
+  }
+
+  .right-align {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+.read-more {
+  color: dodgerblue;
+}

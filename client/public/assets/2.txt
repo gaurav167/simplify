@@ -1,0 +1,29 @@
+So, most of them you should know already from your eleventh and twelve standards or from the first course you have selected and done in discreet maths but still we will quickly go through these concepts.
+So, we can the cardinalities separately; that is what the addition principle says, nothing big, so just to state that.
+Although it is not very difficult to come up with the answers, this intuitively we will use this principle but still the question can be more nontrivial than we imagine.
+So, we have seen an example of this thing earlier when we told that if we consider a complete bipartite graph with m vertices here, right, and n vertices on the other side, I remember we have to go back two classes before and then we have to answer this question when we studied the extremal graph theory question.
+So, Montour had proved maximum how many edges can we have in a graph without having a triangle, right.
+So we can consider a more interesting question about numbers to illustrate this point.
+So, total x, y can be formed nine into ten 90 ways, so 90 two digit positive integers which is you can shift starting from 10 to 99, right.
+Next how many four digit positive integers both start and end in even numbers.
+Of course these are all extremely so easy intuitive things but we just mention it for the sake of completeness.
+So, that means you can use numbers 0, 1, 2 up to 9, right, and this is no more a positive integer or anything, so you can start a password with zero, no problem.
+So, here this four digit password can be like this; this position can come from a set x 1, so how many possibilities?
+Now this is not correct because you know the addition principle can be applied only if these sets are disjoints.
+So, therefore those sets are not disjoint; therefore, when you want to count the total number of passwords we cannot add them up.
+So, we can deal with it using more slightly more sophisticated techniques but as of now so we have an easier method namely using the subtraction principle.
+So we will first note that the number of passwords, so if we do not have that 8 restriction; that means the digit 8 should be present, you just forget it.
+The number of passwords which does not start with zero, so that can be easily counted because there are nine ways of filling this.
+It was like sometimes you may spend more time trying to work with the addition principle and we will see we cannot directly use it and then we will have to do some more sophisticated things there.
+So, before going in to the next thing namely the division principle we will just consider some very simple things which we already known, like for a positive integer n the number of ways to arrange all elements of the set 1 to n in a line is n factorial.
+So, there are six possible ways of listing ordering the elements of the set 1, 2, 3, right.
+Here I have written as n k, so the old book will also write n p k; sometimes I prefer to use this thing because it reminds you that this is the permutation.
+So, there are members of S and there are members of T. Now this goes somewhere, so for everything is mapped to something; a function means everything in the set will have an image here, right, and nothing here will have more than one image this kind of what is the function, what is the relation, you are suppose to preview this thing in any of the elementary books and now here so like this, right.
+The number of different seating arrangements for n people around a circular table is n minus 1 factorial, so that is study this in detail.
+The circular arrangement is just like the table is this entire thing is rotated a little bit, that is alright, this 1 came here, 2 came here, 3 came here, 4 came here and so on, right.
+So, therefore we are defining that two seating arrangements are similar same if for every one sitting the clockwise neighbor remains same.
+So, this comes back to our permutation problem if there are n chair that is n factorial possible ways, right.
+Now let us say all these n factorial possible ways are placed in t. Now the question is if the chair numbers were not there, so one of the seating positions arrangements, right, would have correspondent to how many of these listings?
+But when the chair numbers are not there, all these things corresponds to the same seating arrangement.
+We cannot distinguish between them because the clockwise neighbor's always remains same in any of these seating arrangements; just that it looks different only because we assign certain numbers to the chairs and when they moved we noticed that actually the person who is sitting in this particular chair number is different now but once the chair number is deleted we cannot even identify which was the arrangement, right.
+So, this we can see as T as the number of arrangements with chair numbers; that means the linear arrangements and this S has the kind of configurations we want to count when the rotations does not matter, right, after rotating we still say that this is the same configuration.

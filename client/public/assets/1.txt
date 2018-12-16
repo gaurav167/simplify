@@ -1,0 +1,34 @@
+One is Grimaldi with this is lot of elementary material and something from Extremal Combinatorics by Jukna, and there is this book A Walk Through Combinatorics and so some of the material little later we will come from Lint's book and I may also refer to Brualdi.
+So, this does not need much knowledge as this is almost intuitive what we are doing, but still the way it is applied will show will give a glimpse of what combinatorics says, though the techniques itself is very simple it will give us nontrivial results, not that we are planning to get into a very nontrivial things here but even the kind of examples we consider here we will show that considering the fact that they are only using very, very simple techniques we were getting something interesting.
+So, there are, say, 13 students and suppose there they consider in which month my birthday comes.
+That means two of the students should have birthdays in the same month; this is very simple thing.
+The point is how many times you will have to draw; the maximum number of times you will ever have to draw so that you can end this procedure, you will end up with two socks of the same color.
+Now two of them should fall into the same hole; that means two of the things which you have taken out form the bag should have the same color is what it says, right.
+So, we count the possible number of distinct words here which will be holes.
+So, you could have filled up to z here, and then you can fix b here, then again do the same thing ba, bb, and then b z.
+Similarly, we can count the three letter words as 26 cube, why?
+So, I am taking this example form Grimaldi's book.
+The only thing to note is the way we have counted the number of possible distinct four words of letters, four or less, so that we grouped into four categories.
+This is some rule, and then we will probably mention it later once again, and to find the number of possible words within.
+So, suppose there are thirteen persons and their first names are Seeta, Geeta and Radha.
+The second names are Ramana, Raju, Rao, and Naidu.
+So, today we will explain it in detail, but later we will just assume that this is so easy and therefore, not much explanation will be given when we use this kind of thing, right; that is all that is about the reminders.
+So, I have selected 101 integers form 200 means more than half the numbers I picked up.
+So therefore, we can keep on selecting numbers such that we can avoid one of them dividing the other, but how long can we go like this?
+So, the question is we are trying to get the maximum possible collection such that within the selected things nor two of them are such that one divides the other, right.
+If you write down till 200, 100 odd numbers will come; there will be 100 holes like this.
+So, this is the way then it would be a kind of I mean if that is the thing so then there are 100 holes, 101 numbers; before getting into that let us let us make sure that we understand this completely.
+So, is it true that if I write k equal to 2 raise to i into an odd number.
+For instance if you take an odd number itself 99, how will you write it?
+So, those two numbers which occupied the same hole here indeed are such that the smaller of them divides the higher, right.
+So, that we have to use our imagination and find out a strategy to assign each pigeon to a unique hole and making sure that the number of holes is really less than the number of pigeons, right, where it works out.
+This is simple number theoretic observations; it is not very difficult once you start thinking about it, right.
+So, my strategy is always try to beat this statement; I mean say that, okay, I will try to select some six numbers in such a way that no two of them add up to 10.
+For instance with 1, 9, this is one two set which will add up to 9; we will keep them together, why because this 1 and 9 should not come together in the six numbers we select.
+So, that means our selection has those dangerous pigeons which add up to ten, right.
+So, if you are selecting six; so that means the dangerous couple has to be part of our collection is what.
+So, nice explanation is possible using the pigeonhole principle here.
+Similarly, corresponding to a binary string we have a subset.
+So, this is a bijection between any subset and binary string; probably we will get into these details a little later, but I am relying on your pervious knowledge, because this is not going to be this course is not going to be that elementary.
+In the sense that we will go to every simplest detail and start, right, but I will assume that you are exposed to this thing a little bit, because we want to cover somewhat little more sophisticated notations than this elementary topics, but though I will just mention what how it goes.
+So, we have to assume that n 1 can be as small as 1, maybe it is the possible value starts from one, because there can be a set consisting only of one n 1, and then the largest possible number can be the sum of all these things, because that six elements set contains all these things; that is this n 1 plus n 2 plus n 6.

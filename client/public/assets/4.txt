@@ -1,0 +1,15 @@
+Good morning, today we will have the first module of machine learning part C. I will talk about hypothesis space and inductive bias will give you brief introduction to this, so that when we talk about a different machine learning algorithms, we can refer to this discussion.
+For a classification problem, in the earlier class, we talked about two types of supervised learning problems - classification and regression depending on whether the output attributes type is discrete valued or continuous valued.
+So, induction as oppose to deduction, unless we can see all the instances all the possible data points or we make some restrictive assumption about the language in which the hypothesis is expressed or some bias, this problem is not well defined so that is why it is called an inductive problem.
+And since this yellow point lies to the left of the function it is negative, so this is what inductive learning is about.
+We can see a feature space is described in terms of the positive and negative examples.
+And we are asked to find out what should be the class of those points may be positive or negative in the prediction problem.
+And the set of all such legal functions that we could have come up with they define the hypothesis space.
+A decision tree, a linear function, a multivariate linear function, a single layer perceptron - the basic unit of a neural network, a multi layer neural network; these are some of the representations that we will talk about later in this class.
+So, once you have chosen the features and the language or the class of functions, what you have is a hypothesis space.
+So, capital H denotes all legal hypothesis, all possible outputs by the learning algorithm.
+We have seen already some examples of hypothesis languages as decision tree, linear functions, neural networks etcetera or there could be polynomial function, linear function, or there could be conjunction Boolean formulas, CNF Boolean formulas, unrestricted Boolean formulas so you choose a hypothesis language.
+So, inductive learning means to come up with the general function from training examples.
+So, you cannot come up with the correct hypothesis by logical being by you know which is which is guaranteed to be true without seeing all the training examples.
+So, inductive learning is a ill post problem, you are looking for generalization guided by some bias or some criteria.
+And the reverse of overfitting is underfitting, if you have a very simple function then it cannot capture all the nuances of the data.

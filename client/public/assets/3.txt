@@ -1,0 +1,19 @@
+It, therefore, stands to reason that in computer system, there must be different possibilities how to represent values, that are signed as opposed to those which are unsigned.
+Remember the, what we are trying to understand here is, a scheme that could be used in a digital computer to represent a variable, which could take on either negative or positive integer values.
+In other words, the most significant bit indicates whether the signed integer is a negative or positive value.
+The remaining bits indicate the magnitude of the value in binary as in, as the summation on the, on the right of this expression would, would have you understand.
+I had mentioned at the end of the previous lecture that, this is in fact, not the most popular way among computer manufacturers for representing signed integers, but let us just look at some examples to make sure we understand this.
+So, the net effect is that, for example if I wanted to represent in 8 bits, plus 13, the value would be similar to what we saw in the Sign-magnitude representation.
+Now, the 0 x is an indication to you that, the binary value which is being presented to you, is being shown in something called the hexadecimal notation.
+The answer is, ultimately, as you will understand, somebody will have to build a electronic circuit to add signed integer values.
+This is what is going to be present in a computer, in order to execute the add instruction, that your program might make use of.
+As it happens, the speed of arithmetic and comparison is also superior, for which reason the 2's complement representation has become the more popular of the two that we have seen.
+You are writing a computer program to achieve some, well staged objective, in deciding whether to declare a variable as an integer variable, as signed or unsigned, you would have to know whether there is a possibility that the value - the real world phenomenon corresponding to it could take on negative values.
+To represent the magnitude of the floating point, of the real value, it is not possible to use something like the magnitude representation used for signed integers, because, real values could become much larger or much smaller than what the, in whole numbers that we were concerned with as far integers are concerned.
+Similarly, on the, to the right of the decimal points, the first digit is multiplied by 10 to the power of minus 1 or divided by 10, which is why the value of 0.
+In other words, I shift that, the binary point to the right and to compensate for that, I multiply it by an additional term of 2 to the power minus 1 and you can readily see that 0.
+Why am I showing a lot of 0s here, because, I know that, in the I triple E floating point representation, the f field contains 23 0s.
+So, I am suggesting to you that, it is possible for you to look at the I triple E floating point representation of a value inside a program of yours and if you think about this a little bit, it may not be that difficult.
+By the same token, it is conceivable that you could write programs, to look at the representation of a signed integer variable or to look at the representation of a character variable and check whether what I told you about the ASCII code and the 2's complement code in the I triple E single precision, are all correct.
+So, one can, can actually think about a lot of what I am talking about, as things that can be experimentally verified on the computers that you have access to.
+And in general, one should think about high performance computing as being an extremely experimental discipline.

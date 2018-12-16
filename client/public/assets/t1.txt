@@ -1,0 +1,345 @@
+So, this is the first lecture of the course name combinatorics, and I am from computer science and automation department in the Institute of Science, Bangalore.
+My name is Sunil Chandran.
+So, in this course we will be studying most of the basic notions of combinatorics several techniques, and later we will also consider some advanced techniques.
+Some of the books I will be referring are listed here.
+It is not that I will only look at these books, but whenever I use a book for some other purposes maybe later if I want to teach linear algebra method in combinatorics, then I may refer to some other books and I will mention at that time or probably stick method if you want to introduce, then I will mention the name of the book when I start those classes.
+So, initially most of the topics will be selected from these books.
+One is Grimaldi with this is lot of elementary material and something from Extremal Combinatorics by Jukna, and there is this book A Walk Through Combinatorics and so some of the material little later we will come from Lint’s book and I may also refer to Brualdi.
+So, the first lecture we will consider the simplest principles in combinatorics maybe the pigeonhole principle.
+So, this does not need much knowledge as this is almost intuitive what we are doing, but still the way it is applied will show will give a glimpse of what combinatorics says, though the techniques itself is very simple it will give us nontrivial results, not that we are planning to get into a very nontrivial things here but even the kind of examples we consider here we will show that considering the fact that they are only using very, very simple techniques we were getting something interesting.
+What is this pigeonhole principle? So, it is about pigeons and holes.
+So, there are n pigeons, so there are n plus 1 pigeons but only n holes, and the pigeons try to occupy the holes; however, they occupy the holes they want to probably be as comfortable as possible.
+They will try to make that sure that each pigeon gets one hole, but it is not possible is what we are saying, because we have more than n pigeon but there are only n holes.
+So, at least one hole should contain two pigeons two or more pigeons that is obvious, right.
+See forget about pigeons now, so we will just say if a set consisting of more than n objects is partitioned into n classes then some classes use more than one object.
+It is not possible to put, and every object in a different class is what we are saying, because we are only allowing n class.
+So, the proof is as simple as that.
+Suppose it is not true than each class has only one element but then there are utmost one element, but there are only n classes.
+So therefore, we can only have n objects, but initially we have assumed that there are more than n objects.
+Now we will try to illustrate this principle with some very, very simple examples.
+So, the first question is this.
+So, there are, say, 13 students and suppose there they consider in which month my birthday comes.
+Each person ask this question, and then is it possible for them to have their birthdays in different months; obviously, it is not possible is what pigeonhole principle says, because there are 13 students.
+There will be thirteen birthdays, but then in an year there are only 12 months.
+So, it is obvious that at least two of the students should have their birthdays during the same month.
+So, here what are the pigeons, what are the holes? So, we have 13 students here, right; these 13 students will be the pigeons, right, and the holes will be the months, months will be the holes.
+When I says months it is January, February like December, right.
+So, there are 12 holes here.
+So, now each students being a pigeon so when I say that a pigeon that student occupies a hole; that means his birthday goes into one of the holes namely one of the months, right.
+Now because pigeonhole principles say there are thirteen of them but only twelve holes are there; two should go into the same.
+That means two of the students should have birthdays in the same month; this is very simple thing.
+So, this is what we are trying to write.
+So, the next example is also very simple.
+So, suppose you have twelve pairs of socks, and let us say all of them are of different colors; one pair of socks black color, another pair of socks white color, another pair of socks green color and so on, twelve pairs of socks.
+Now the question is so you kept all of them in a bag.
+So, one day morning you are taking out the socks one by one, your intention is to get two socks of the same color get a pair of socks of the same color, so that you can wear it and go.
+But then it may so happen that the first draw you get a black socks and you put it there, but the next draw if you get a black one your done, because you can go but then next maybe a white; so you cannot wear a white and black socks together.
+So, you draw once more; so it maybe a red, but if a white or black comes you will be done, and again you draw.
+So, the thing is if your unlucky you can keep on going like this.
+The point is how many times you will have to draw; the maximum number of times you will ever have to draw so that you can end this procedure, you will end up with two socks of the same color.
+So, here definitely if you take out all of them you will get, but you will not have to do it; you will have to do it only thirteen times, why? Because all the thirteen cannot be a distinct color; that is because only twelve different colors are available, so here we can model the question using the pigeonhole principle as follows.
+So, here which are the pigeons the socks individual sockses are the pigeons which we are taking out, so there are actually as we draw out.
+Suppose you draw out thirteen socks, right, thirteen pigeons will come from that, right, the one the thirteen things which we drew out from took out from the back.
+Now which are the pigeons holes which are the holes, right, the holes are the colors.
+There are only, say, we will say black, white, black, white, green, like that, there are twelve colors; therefore, only twelve holes are there; there are only twelve holes here, right.
+So, there are twelve holes and thirteen pigeons.
+Now two of them should fall into the same hole; that means two of the things which you have taken out form the bag should have the same color is what it says, right.
+So this is the second example simple example of course; it is just for illustrating the idea, right.
+Now third example is so here is a question.
+Suppose you have 50,000 words of four or fewer letters you can assume that you are using English language; there are 26 letters.
+They are all maybe the upper case and lower case, it does not matter.
+So, we consider it as one, and then we have 50,000 words; each word is made of four or fewer letters, maybe four letter word, three letter word, two letter word or one letter word, right.
+The question is can they all be distinct, right; somebody clams that, okay, I have given a 50,000 words, these are all distinct words, right.
+So, I assure you maybe he thought like that, because he tried to write down 50,000 different words; he thought he managed to write 50,000 different words, right.
+Now how do you want to show that that is not possible; they cannot all be distinct, how do we show this thing? So, we count the possible number of distinct words here which will be holes.
+So, how will you count that possible number of distinct words? These are four letter words made of 26 letters in English alphabet.
+So, let us say one letter word how many you can get? You can get 26 of them, right, because it can be a, it can be b, it can be c, it can be any of them, right.
+So, then you can add to it the possible number of two letter words.
+So, that is the first letter, so two letter can something like this; write the letter here, say, a, another thing can be b, it can be aa, ab, ac like that.
+So, the first position can be filled in 26 ways, and the second position can be filled in 26 ways.
+There are 26 square possible different two letter words that we can find, right.
+We can fix a here, and here you could have filled a, you could have filled b, like this, right.
+So, you could have filled up to z here, and then you can fix b here, then again do the same thing ba, bb, and then b z.
+And then you could have fix c here ca, cb and c z like this.
+So, every time this is 26; here it is 26 and then from the next one again 26, so 26 into 26; that is what.
+Similarly, we can count the three letter words as 26 cube, why? Because it is like this, am I right.
+This position can be filled in 26 possible ways, this position can be filled in 26 possible ways, and this can be filled in 26 possible ways, and the number of four letter words is 26 to the power 4.
+Now if you add all these things together what you will get is then you have to do a calculation of that.
+So, I am taking this example form Grimaldi’s book.
+So, he has done the calculation.
+I will look at the calculation; so that is it turns out to be 4, 75, 254 and which is definitely less than, okay, what did we ask? The question we asked was 50,000 is what we asked, 50,000 can be different of course but then if you put one more zero here, right.
+If you 4, 75, 000, right if you put one more zero here; if you are asking 50,000 definitely it can be, because there are 4, 75, 254 words.
+But suppose if you are asking about five lakh words suppose he claimed that there are five lakh distinct words, then it is not possible, right.
+So, then it is not possible, right.
+Why it is not possible? Again do map it to the pigeonhole principle; here the pigeons are his five lakh words, these are the pigeons and these things, right, the distinct possible word, these are the holes, and here these five lakh pigeons should sit in this 4, 75, 254 holes and two of them have to go to the same hole.
+That means two words have to be same that is what it says, right.
+So, therefore, his clam that five lakh different words or possible distinct words are possible is not correct, right, definitely.
+So, this is also simple example.
+So, we are just trying to illustrate it by very simple examples initially, right.
+So, it would not surprise anybody all these things, right.
+Here the only thing to note I mean because we are starting the course.
+The only thing to note is the way we have counted the number of possible distinct four words of letters, four or less, so that we grouped into four categories.
+One exactly one letter words consisting of exactly one letter, and then we put it into words consisting of the others, right, exactly two letters, and then we thought about the words which consists of exactly three letters, and then we thought of the words which consists of exactly four letters.
+So, we know that the number here we can add to this number and this thing.
+So, this is what this is; we can sum this up, right, here because they are all disjoint sets.
+So, if there are some disjoints sets then to get the total cardinality then we can add up the cardinalities of each set.
+This is some rule, and then we will probably mention it later once again, and to find the number of possible words within.
+Here it was just 26, it was easy.
+Here we use the product rule, because the first position can be filled in 26 ways, and then second position can be filled in 26 ways.
+So, this was the number.
+Similarly, here we use the product rule.
+So, using that the first position can be filled in 26 ways; the second position can be filled in 26 ways, and the third position can be filled in 26 ways.
+The total number of ways you can make the words is 26 into 26 into 26, right.
+Similarly, here 26 raise to 4 can be.
+This is probably one thing which you have to note.
+So, this gave us the possible number of distinct words which we considered as pigeonholes, and then this five lakh words our friend wrote down are the pigeons.
+They are just words; I mean distinct or not we do not know, he just claimed it is distinct.
+But for us it is just some words he wrote, and these objects the words considered as objects they are the pigeons, right, and we think of those pigeons occupying the pigeonhole, because if this word he wrote is similar to one of our distinct words, and then we will assume that that pigeon came and sat in this hole and then like that.
+But we see that because there are more pigeons here than the number of holes definitely there should be two pigeons, two words he wrote should occupy the same hole; that means they cannot be distinct, they should be the same word, right.
+So, now is the third example.
+So here I had I mean five lakh.
+So, suppose there are thirteen persons and their first names are Seeta, Geeta and Radha.
+The second names are Ramana, Raju, Rao, and Naidu.
+So, then can they have all different full names? So, what we mean is so somebody has a name.
+Seeta Raju, right, or Geeta Raju; these are different people, because at least first names are different and if the other way instance.
+For instance if both of them may have the same first name Seeta Seeta, Seeta Raju and Seeta Ramana.
+These are two different names because anyway the second part is different.
+Now the question is we have thirteen people here; can they all get different names? But when we looked at only the first names we see only three of them; the first names cannot be three first names only, first names and four last names we saw.
+If you only looked at the last name there are only four of them.
+The last names alone cannot be distinct for all of them definitely; there are thirteen of them, but we see only four.
+And similarly, the first names alone cannot be distinct, because there are three of them, but then when you put them together can they all be distinct? Here the pigeonholes are the distinct possible names like Seeta Raju, Seeta Ramana, Seeta Naidu like that, right, and Geeta Raju, Geeta Ramana like that.
+How many of them are possible? We can again use the product rule here, because the first names are possible in three ways; the last names are possible in four ways.
+So, 3 into 4 equal to 12 possible names are there, right.
+So, these will be our holes now; these will be our holes.
+Now which are the pigeons here? The people, persons; there are thirteen people, these are the pigeons.
+These thirteen pigeons will try to occupy the twelve holes and then definitely two of the pigeons should occupy the same hole; that means they should get the same name, that is what two people; we cannot avoid that is what pigeon hole says two pigeonhole principle says.
+Two people should get the same name, because we have only twelve names and there are thirteen people, again too simple.
+So, it does not surprise us at all, right, but still we just get this idea of modeling the problem as some pigeons want to occupy some holes, and then there are more pigeons than there are holes, and therefore, one of the hole should have more than one pigeon, right; this is what essential we are telling in most of this things.
+Now let us look at a something maybe slightly more nontrivial.
+So, let us look at some questions which involves numbers; there are n numbers.
+If we divide these n numbers by n minus 1 then at least two of the numbers should give the same remainder; this is what we wanted to tell.
+So, for instance we can.
+So, we can take an example n numbers; let us say take n equal to 100, right.
+Now we are given 100 numbers however big I do not know it can be, say, ten digit numbers maybe it can be some twenty digit numbers very large numbers, but what we do is we try to divide those numbers by 99, right, and then if I divide those numbers by 99 then we look at the reminders.
+We claim that all these 100 numbers cannot have distinct reminders; at least two of them should give us the same reminders, why is it so? We will see which are the possible reminders when you divide by 99.
+So, 1 can be a reminder, 1 can be a reminder, 2 can be a reminder, 3 can be a reminder, up to 98 can be a reminder.
+So, there are total 99 possible reminders, right.
+For instance if any number for instance k is the number k is one of the numbers so k 1, so we can definitely write it as q 1 into 99 plus r 1; here r 1 is the reminder.
+This r 1 is in between 0 and 98, and this r 1 can only take 99 possible values including zero and 98, but then there are 100 numbers.
+So, here we have the possible values of reminders are the pigeon holes; these are the pigeons holes; these are the holes.
+The possible values are reminders, and these 100 different numbers, say, we will say k 1, k 2, k n numbers, n equal to 100 here.
+These are the different pigeons, and because we have only one less 99, so here because we are dividing by n minus 1 here, one less pigeon holes, and two of them should sum k i and some k j should be such that their reminder should be same.
+In other words there should be some k i such that if you write it in this form q i into 99 plus r i and k j equal to q j into 99 plus r j, then r i equal to r j.
+So, we should able to find out an i and j from 1 to n such that this r i equal to r j, because we do not have enough r i and j, because we are putting k i in the hole corresponding to r i and k j into the hole corresponding to each k 1 will go to the hole corresponding to r 1 and so on.
+But then the number of holes are only n minus 1 here, but then there are n pigeons here these things.
+So, therefore, two of the pigeons should go into the same hole which means that two of them should have the same reminder when divided by 99, right.
+This is a most elementary thing from number theory.
+So, I am sure most of you are familiar with this stuff; if at all you are not just think about it a little bit.
+So, it is good, because with this we will keep on repeating.
+So, today we will explain it in detail, but later we will just assume that this is so easy and therefore, not much explanation will be given when we use this kind of thing, right; that is all that is about the reminders.
+So, that is what.
+So, it does not mean that you have to divide by n minus 1.
+Suppose you divide by some number n dash which is smaller than n the same thing is true because the number of possible reminders only from 0 to n dash is strictly less than n.
+There are n pigeons here and only n dash holes.
+Then also we will get several pigeons going into the same hole maybe more than one pigeon going into the same hole; that means more than one numbers form this n numbers giving you the same reminder, right.
+This is a very elementary fact from number theory.
+Now let us see a little more interesting thing.
+So, there are 101 integers selected from the set 1 to 200.
+When I write like this, this means 1, 2, 3 up to 200, the set corresponding to the set short notation for that.
+Now sometimes I will write like this when I am tired of writing this.
+So, when I write n I would mean this 1, 2, 3, up to n.
+So, 200 means this is a very long notation; therefore, this is very short therefore.
+Sometimes we use it, right.
+Then what do we want to assume? So, I have selected 101 integers form 200 means more than half the numbers I picked up.
+Then can I be sure that I have selected two numbers a and b such that a divides b, always irrespective of the way I select, because I just selected 101 numbers just that more than half numbers are there from 200 numbers, from 1 to 200, not 200 numbers 1 to 200.
+But can I now be sure that I have picked up two numbers such that one of them divides the other in this collection of 101 numbers; this is the question.
+So, it is conceivable that for instance I think of selecting.
+So, there is numbers from 1 to 200.
+I selected, say, initially 3 then I selected 7, so 7, 3 does not divide 7.
+So, then I selected, say, 10; neither 3 divides 10 nor 7 divides 10.
+So, then I can select 5.
+Here none of them are dividing each other; oh 10 divides 5, sorry.
+So, it can be something like 8, right.
+So, none of them divides each other now; 3 does not divide this or this or this.
+This does not divide this or this; this does not divide this; this does not divide this, right.
+So therefore, we can keep on selecting numbers such that we can avoid one of them dividing the other, but how long can we go like this? For instance if we keep on selecting prime numbers 3, 5, 7, 11 13, 17 and so on, then we can collect quite a few numbers such that 1 does not divide, because one prime number p 1 cannot divide another prime number p 2, right.
+But then we would not be able to make 101 numbers like this; there are not so many.
+We can count between 1 and 200 how many prime numbers are there.
+It will take some time but we can do that, but it is not possible to get 101.
+But not necessarily prime numbers; we can also say here 10 and 8, they not dividing each other.
+So, they are not prime numbers.
+So, it is not necessary that we have to select prime numbers to make sure that one does not divide the other.
+So, the question is we are trying to get the maximum possible collection such that within the selected things nor two of them are such that one divides the other, right.
+So, here we only claim that we cannot get more than 100 such numbers.
+I do not know you may get 100, but you may not get more than 100 is what we want to say.
+It is a simple claim.
+So, it is not we are not calming anything about; this is the best we can do or anything, right.
+So, how do we show this thing? We will show this thing.
+So, we do something like this.
+So, we have to again we want to use the pigeonhole principle here.
+So, we have to identify the pigeons which will be the possible pigeons, naturally I mean comes to our mind probably immediately that maybe the pigeons are.
+This 101 numbers that we selected from 1 to 200, right; these are the pigeons.
+It makes sense to assume that they are the pigeons; let us try.
+Then what are the holes? So, holes not at very clear.
+I mean one does not divide the other, I mean how will you model it? I mean as a pigeon, because it is a pigeonhole.
+I mean how will I decide a hole on the basis of this criterion? So, it is not immediate.
+So, this is the way to model it.
+We take a number, say, some number k.
+Now you try to write it as a power of 2 into 2 to the power i into an odd number.
+We can always do like this.
+For instance so if you give me a number 10, so you can write it as 2 into 5.
+So, here 2 to the power 1 into 5, right.
+The point is then I will define holes corresponding to all the odd numbers, the holes corresponding to odd numbers, right; that means when I write 10 like this 2 raise to 1 into 5 I will put 10 into the hole corresponding to 5 that is what we are saying, right.
+So, for instance is it possible, what is 100 then? 100 is equal to 2 to the power 2 into 25.
+So, this 100 will go into the hole corresponding to 25, right.
+So, tell me some other number? Thirty six, 36 is 2 to the power 5 into 1.
+So, 36 will go to the hole corresponding to 1, right.
+So, like that but how many holes are there here? So, here there are 100 holes because from 1 to 200 there are 100 odd numbers because one, one to two there is one odd number one to two, three, four; there are two odd numbers.
+So, five, six like that, right; half of them are odd numbers.
+If you write down till 200, 100 odd numbers will come; there will be 100 holes like this.
+So, this is the way then it would be a kind of I mean if that is the thing so then there are 100 holes, 101 numbers; before getting into that let us let us make sure that we understand this completely.
+So, is it true that if I write k equal to 2 raise to i into an odd number.
+There is a unique odd number which is coming here, because otherwise it may so happen that the pigeon has decided to go into the hole corresponding to this odd number.
+If I can write it in two different ways, say, 2 raise to j into another odd number, right.
+So, then this is odd 1, this is odd 2, right.
+The pigeon will be confused where which hole it should go.
+This hole corresponding to the odd the first odd number or the hole corresponding to this second odd number, but you can easily see that it will never happen because this is what you have done is you have extracted out all the two’s out of which are available the factor of twos which are available in k, and the remaining is a unique odd number, right.
+Now sometimes not that it is also possible that we may have a 2 raise to a 0 here.
+For instance if you take an odd number itself 99, how will you write it? It is 2 to the power 0 into 99, right.
+So, 99 will go in to the hole corresponding to 99 itself, right; that is why it is we can assign each number uniquely to your hole corresponding to the odd number in it, right.
+You remove all the factors of two and whatever is remaining, right.
+Now how does it solve our problem is the question.
+So, the problem was to show that there exist two numbers a and b in the selected collection of 101 numbers such that a divides b.
+Now we know that there are 101 pigeons, these selected numbers are the pigeons, and there are hundred holes, the odd numbers are the holes.
+So, there should be two numbers, say, a comma b, let us say a comma b, which belongs to the same hole; same hole means both of them have gone to the same hole, the hole corresponding the same odd number.
+So, that means a equal to 2 to the power i into some odd number you can say x, x is that odd number.
+b is equal to 2 to the power some j into x; this is what has happened, this x the hole corresponding to x.
+Now can you see that now let us assume that b is greater than a.
+They cannot be equal; one of them has to be bigger, right, without loss of generality.
+Now you can easily see that x and x are same here.
+So, i has to be bigger than j.
+So, now can you see that x into 2 raise to, sorry j has to be bigger than i.
+So, x into 2 raise to i divides like this, x into 2 raise to j; yes, because x is here 2 raise to i.
+Then i two’s are there, so here j two’s are there; j is bigger than i, right, because b is bigger than a.
+So, we have j greater than i also.
+So, there are more two’s here than there are here.
+So, these entire things x and two i number of two’s; those factors are available here also.
+Therefore, this divides this, right.
+Therefore, we can see that this b divide a.
+So, those two numbers which occupied the same hole here indeed are such that the smaller of them divides the higher, right.
+Because except for that odd part the others are all powers of two any smaller power of two should divide the higher power of two; that is the reason for that.
+So, slightly I mean we have been considering several examples.
+This seems to be a little more trickier than the earlier things.
+It is not immediate, because here what was tricky was that we could see the pigeons probably intuitively we could see that these numbers are the pigeons, but the holes were not visible which are these holes? So, that we have to use our imagination and find out a strategy to assign each pigeon to a unique hole and making sure that the number of holes is really less than the number of pigeons, right, where it works out.
+Of course we look at the problem, and we try to see what is the situation, and based on that only we decide the number of pigeons initially, and the problem was set like that, because we saw that there are in this way there are 100 holes.
+So, that is why we told 101 pigeons we will create.
+Then there were some simple observations like this, because if two numbers are written 2 raise to i into x and 2 raise to n into x one of them has to divide the other.
+This is simple number theoretic observations; it is not very difficult once you start thinking about it, right.
+So, this slight cleverness has gone into that.
+Now the next thing it is again question about numbers.
+So, you consider the set 1, 2, 9.
+So, we could have nine we could have written using our notation like square bracket 9 square bracket close.
+So, they decided to write it as 1 to 9 here.
+So, he takes six numbers from this thing 1 to 9; that means you leave out three and any six you take.
+We are saying that in the selected six numbers there should be two of them such that if you add them up those two numbers we will get 10.
+So, again if it is straight forward thing is it pervious.
+So, we have this nine numbers from 1, 2, these are the nine numbers.
+So, this you could have written like this, right, and so let us say I tried to select these numbers.
+So, my strategy is always try to beat this statement; I mean say that, okay, I will try to select some six numbers in such a way that no two of them add up to 10.
+So, for instance I can select 1, then I will select 2, okay.
+So, they are not adding up to, then I select 3.
+So, here 3 plus 1 is not adding up to 10, 3 plus 2 is not adding up to 10, is it okay.
+Now I will select 4; it is 4 plus 3, 7.
+So, none of them are adding up to 10, right, 4 plus 2 is 6, 4 plus 1 is 5.
+Here 2 plus 1 is 3, this is 5 and so on.
+So, you can add again another 5.
+Now also I am safe 5 plus 4 is 9; all other answers are smaller, but you add the next number you will see that 6.
+So, this 6 plus 4 is adding up to 10.
+So, what could I have done? So, if I wanted to add 6 as the sequence this is not correct, maybe I could have avoided this 4 from here, but then I have to take another one, maybe I will try to take 7.
+Then this is adding up to 10, 7 plus 10.
+So, let us try to avoid this also.
+Then what about 8 and this is adding up to 10, so what? We claim as whatever you try, I mean you can maybe 1, then I try 8, 8 plus 1, then I try 7; this is also okay.
+Then I try 6, right, this is also okay, 4.
+Then I try, tell some number 5, and that is also okay.
+None of them are adding up to 10 up to now, next is what? Next if I take 4 then this will add up to 1.
+Then I take 9, then this and this 9 plus 1 will add up to 1 and then try something else, maybe 3 and 7 and 3 will add up to 10.
+So, how is it happening, right? So, whatever I am taking so by that six number is forcing two of the numbers we add up to ten.
+So, why is it so can we explain these phenomena? Can we say that these will always happen; we cannot get six numbers out of this one to nine such that two of them do not add up to ten.
+So, now again the question, which are the pigeons, which are the holes; the pigeons here are probably the six numbers we select, right.
+Pigeons are the six numbers selected, right.
+Now holes, what are the holes? The holes we have to again cook up; it is not very clear what should be the holes, but again here we can see what we are trying to do is to avoid two numbers adding up to 10.
+So, now let us try which are the pair of numbers which add up to 10.
+For instance with 1, 9, this is one two set which will add up to 9; we will keep them together, why because this 1 and 9 should not come together in the six numbers we select.
+Because if they come together then we will end up with the two numbers which add up to 10, so this is one.
+So, we will consider this as a hole and then now 2, 8 is another one which should not be allowed; this is another hole.
+This is hole number two and then 3, 7, these are another one, right, and 4, 6 is another one, right, because 6 is another one, and another last hole is just 5, no.
+So, because see here just 5 is the only number left out, because 1 and 9, 2 and 8, 3 and 7, 4 and 6 is fine.
+So, 5 is the only number which is left out, right.
+Now we have selected six numbers then it can be in any of these groups.
+This group is not dangerous it can be, but this is only a singleton group.
+So, this is one two three four five holes here, right.
+This is hole one, this is hole two, this is hole three, this is hole four, this is hole five.
+So, we have partitioned in the ten and nine numbers into this thing.
+There is no other possibilities.
+When every selected number has to be from this or this or this or this I mean these pigeons have to occupy this or occupy this; that is the way we tell, right.
+It means that the selected number belongs to this or this or this or this, because we have partitioned the number.
+Some numbers from 1 to 9 into disjoint sets here, right, disjoints sets here one nine.
+This do not have any intersection here, right, and they cover all the numbers one two three four five six seven eight nine; all the numbers are covered, right, and they are disjoint.
+Now when I select a pigeon here the pigeon comes from one of these things.
+It is like rather than saying the pigeon occupies the holes so we can say the pigeon came from that hole; that is also a different way of putting it, pigeon came from that hole, right.
+So, now but six pigeons came, so if each of them each of the holes contain only one pigeon or may be each pigeon came from a different hole then only five could have come.
+So, then two pigeons have come from the same hole, but it cannot be from this hole, because this hole itself had only one pigeon, right.
+So, here that means maybe it is this or this or this which have sent out both its pigeons to our selection.
+So, that means our selection has those dangerous pigeons which add up to ten, right.
+So, we cannot avoid it; that is the way it is not allowed.
+So, here yeah, it was instead of saying that the pigeons occupying the hole initially we thought that, okay, all these numbers are pigeons, and they are kind of sitting in these holes, right, and then two two two each and the two pigeons which are sitting in the same hole are the dangerous couple, right.
+We are not supposed to take them together, but then there are only five holes, and then the last hole is only singleton, but then we should get two pigeons from the same hole to make six.
+So, if you are selecting six; so that means the dangerous couple has to be part of our collection is what.
+So, that is what we show when we played with the numbers and when we were trying to make six numbers without having those two numbers which are up to ten; we will unable to do it, right, that is completely explained now by this thing, right.
+So, nice explanation is possible using the pigeonhole principle here.
+Now the next question we consider is this.
+Let S be a set of six positive integers whose maximum is utmost 14, say, the maximum is 14 we can say.
+Then the sums of the elements in all the non-empty subsets of S cannot be all distinct is what we are saying, right.
+So, we have six positive integers, yes, right, consists of six positive integers.
+So, we can write it as say n 1, n 2, n 3, n 6, right.
+So, let us also say that n 1 is less than n 2 is less then n 3.
+They cannot be same, because there are six of them n 6.
+Now six positive integers and what did they say? Whose maximum is utmost 14, right, maximum is utmost 14 means this n 6 is known to be less than equal to 14.
+This is some information we have; the biggest number is utmost 14.
+Now we are interested in forming all possible subsets of these numbers.
+So, how many subsets can be formed? So, this is one thing which we all should know if S is a set consisting of six elements then there are 2 raise to 6 possible subsets of it, right, 2 raise to 6 possible subsets of it.
+How do you count it? So, one easy way of counting it, so we will introduce the question once more later in the next lecture next to next lecture.
+So, how many i subsets are there of n elements sets, how many subsets are there exactly containing i elements, but let us not go into that detail now.
+So, just to count how many subsets are there here for an n elements set of maybe six element set; what we can do is a subset can be formed like these.
+So, this is S, so let us see a is a subset of this thing.
+So now I can decide to put n 1 in A.
+So, whether I can decide whether n 1 belongs to A or not; if n 1 belongs to A, right, I can put a one here, say, whether it belongs to A, right.
+So, you can put, so let us see.
+So I will make a six bit string.
+So, if it belongs to A I will put a one here.
+If it does not belong to A I will put a zero here, right, like that.
+So, I will get a number here like this, right, depending on whether it belongs; so that means the n 2 belongs, n 4 belongs, n 5 belongs.
+n 1 does not belong, n 3 does not belong and n 6 does not belong, right.
+So, the point here is that corresponding to the set we can write something like this; write the binary string and we know that how many.
+So, corresponding to each binary string we have a set also corresponding to a subset we have a binary string.
+Similarly, corresponding to a binary string we have a subset.
+It is a easy to see that.
+So, this is a bijection between any subset and binary string; probably we will get into these details a little later, but I am relying on your pervious knowledge, because this is not going to be this course is not going to be that elementary.
+In the sense that we will go to every simplest detail and start, right, but I will assume that you are exposed to this thing a little bit, because we want to cover somewhat little more sophisticated notations than this elementary topics, but though I will just mention what how it goes.
+Later I will skip most of these things we need, because these are the initially classes I am just remanding you these things.
+There are 2 raise to 6 possible distinct.
+So, the 2 raise to 6 is 64, but we are only interested in nonempty sets.
+So, that means S has 2 raise to 6 minus 1, because empty set is now deleted, total 65 nonempty sets.
+So, this 65 nonempty set; question is, is it possible that we can have 65 for I sum up within the nonempty set.
+I can sum up there are certain numbers inside that which came from this.
+I can sum up the numbers in that and then associate a sum for that subset; can all these sums be different? That is the question we are asking, right.
+Now it depends on these numbers, because what are the possible values of the sums? So, now these will the pigeons, this 65 nonempty sets will be the pigeons, right.
+These will be the pigeons, but here the holes are the possible values that we can get for six elements of subsets, but in the possible values mean corresponds to the smallest value is n 1, the largest value is n 6.
+But we do not have a clue about what kind of these numbers are; what kind of numbers are these n 1 and n 6, right.
+So, we have to assume that n 1 can be as small as 1, maybe it is the possible value starts from one, because there can be a set consisting only of one n 1, and then the largest possible number can be the sum of all these things, because that six elements set contains all these things; that is this n 1 plus n 2 plus n 6.
+So, it may so happen that these are the largest possible numbers there is this.
+It can be this is 14, it can be 14.
+So, it can be 14 plus 13 plus how much, 12 plus 11 plus 10 plus one two three four five plus nine, right.
+So, these many can be there.
+So, we will continue it in the next class, because the time is ending.
+So, we will complete it in next class, right.

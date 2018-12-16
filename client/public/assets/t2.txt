@@ -1,0 +1,296 @@
+So, welcome to the fifth lecture of combinatorics.
+Today we will discuss some elementary concepts.
+So, most of them you should know already from your eleventh and twelve standards or from the first course you have selected and done in discreet maths but still we will quickly go through these concepts.
+In combinatorics a you counting principles we can mention initially; one is called addition principle.
+See if A and B are two disjoints finite sets then the cardinality of A union B is equal to cardinality of A cardinality plus cardinality of B.
+For instance I have a collection of see the numbers which are below 100 which, each number in this collection is either an odd prime or an even number, how will you and so these are disjoints set; an odd prime is never an even number.
+So, then I can see which are the odd primes below 100, so that is 3, 5, 7, etc.
+So, we count first that sets cardinality we find, then we can find the cardinality of even numbers below 100, say, like between 1 and 100, say, 2, 4, 6, fifteen numbers are there; we add them together and this is simplest principle.
+So, when we have disjoint sets and if I want to know how many elements are there in the union of them we can adjust add for the cardinality’s of individual sets and the generalized addition principle says okay, this is just for two, so what if he had a several disjoint sets, disjoint means pair-wise disjoint; that means no two of them share anything, right.
+So, we can the cardinalities separately; that is what the addition principle says, nothing big, so just to state that.
+Similarly, we can mention a subtraction principle.
+Let A be a finite set and B be a subset of A, then the cardinalities A minus B equal to cardinality of A minus B.
+Here it is important to note that for to apply this thing we should we should have this condition B is a subset of A.
+For instance if A intersection if B had some elements which are not there in A, this would not have worked, right; for instance we will be subtracting more, right.
+So for example, in our pervious example we wear telling about numbers between 1 and 100 and suppose we are interested in odd numbers which are not prime between 1 and 100 then what will you do? We will consider all the odd numbers say 1, 3, 5, 7, 9, 11, 13; these sequence of numbers these numbers will form the set A here, right, and the prime numbers see we are only interested in odd prime numbers now.
+This we have to remove like earlier 3, 7 because these is subset of that.
+So now therefore, to find the numbers which are odd but not prime we can just do this thing because the other thing if we want, we are the subtracting off the prime numbers which is subset of this thing, right, and it is also fairly a very simple thing.
+So, here is one question; although it looks simple, sometimes it can be useful.
+Although it is not very difficult to come up with the answers, this intuitively we will use this principle but still the question can be more nontrivial than we imagine.
+So, find the number of positive integers below 1000 that have at least two different digits.
+So, let us see what is this question? So, I want the number of positive integers; that means from 1, 2, 3, these are the positive integers below 1000, not including thousand, right, strictly less than 1000 up to 999, right.
+So, now you can consider this set A as this 1, 999, right and then we can consider another set B which is the subset of A defined like this, B is what; what was our question? The question was that have at least two different digits; I mean if you take a number like 333, right, this has only one digit or similarly just take four, this has only one digit, right, one type of digit.
+There is no two different digits here, right.
+Similarly, for instance if I take the number 88, this is only one digit namely one type of digit, right, 8 only, both are eight but 89 is okay because there are two different digits here, right; you want to count this kind of numbers.
+So, rather than directly counting it, right, how you go about counting this kind of directly for instance two different digits.
+This first digit can be filled in certain ways, second digit can be filled in certain other ways; we have to make sure that they do not repeat.
+So, rather than directly doing like that we can go in this way; first we consider this set A 1 to 99, B is a subset of A, what is that set B? We will consider the sets which have just one digit; for instance these numbers 1, 2, 3 up to 9, this definitely does not belong to the kind of sets we want, right.
+So, then we will consider these kind of numbers 11, 22 up to 99 and then we will consider 111 up to 999, right.
+So, we can find A minus B here, right.
+So what we are asking for is the cardinality of A minus b, right.
+So, subtraction principle says this is A minus B.
+We know A here is 999 because 1 to 99 is the total number of numbers, B here is 3 into 9, 27 because first we have this one digit numbers, 1, 2, 3 up to 9.
+Next we have these kind of numbers, this is another nine of them and then we have these kind of numbers another nine of them right, sorry another nine of them, so another nine of them.
+So, these are the 27 one digit numbers.
+So, that our answer is this, how much is this? 972, right.
+So, this is just to illustrate the subtractions principle.
+Then next question next is the product principle; what do we mean by product principle? Let X and Y be two finite sets, then the number of pairs x, y satisfying x element of x and y element of y is the cardinality of x into cardinality of y.
+So, actually here we have a set x, right.
+So, this can be something, say a 1, a 2, a n, right, n of them and then y, so this can be say b 1, b m, right.
+Clearly what we are interested in is the cardinality of the Cartesian product, right, this is what is the Cartesian product, right.
+So, the Cartesian product we know these are things of the form x, y, so that x belongs to A and y belongs to B, right, X cross Y cardinality, right.
+So, this is what we count the cardinality of X cross Y.
+So, that is cardinality of X into cardinality Y, this we know, Cartesian product you might have studied in your eleventh standard also, eleventh and twelfth standard also, so this is what we are seeing.
+This kind of problems, where do we need these kind of things.
+So, we have seen an example of this thing earlier when we told that if we consider a complete bipartite graph with m vertices here, right, and n vertices on the other side, I remember we have to go back two classes before and then we have to answer this question when we studied the extremal graph theory question.
+So, Montour had proved maximum how many edges can we have in a graph without having a triangle, right.
+So, we showed that is the number of complete bipartite graphs will give some example were the number of edges possible are maximum without introducing a triangle, right.
+So, here let us say suppose there are m things here and n things here, how many edges can you have in these bipartite maximum, right.
+So, this corresponds to x here, this corresponds to y here; see look an edge corresponds to an x, y where x belongs to the X this side and a y belongs to Y this side.
+So, that is how number of edges possible is m into n, right, so this we had done last time and did we do any other, did we did we see any other example? Yeah in another question we had seen this Sita, Gita, Radha.
+These were the first names of some peoples some collection total 13 people are there whose first names are always either Sita or Gita or Radha and then we told that their second names are either Rao, Ramana or Raju or Naidu, right.
+So, then these are second names always like this, then we asked how many possible names can be formed; in one of the earliest question we considered, right, using these kind of first names and these kind of second names.
+This is our x here, this is our y here, the name that gets formed will be x, y; Sita Rao, right, or it can be Sita Ramana or Sita Raju, Sita Naidu.
+Similarly Radha Rao, Radha Ramana, Radha Raju, like that we can form.
+So, how many you can form? It is equal to cardinality of x into cardinality of y, here it is 3 into 4 is 12, right, so this is we had considered.
+So, we had already seen such things; it is quiet intuitive, so we are just formalizing that thing, so that is all.
+So, now let us look at the so-called generalized product principle.
+So, instead of just two sets, suppose we have k different sets X 1, X 2, X k finite sets, right, and then the number of k-tuples of the form x 1, x 2, x k satisfying, see this x i comes from, so the i th component here comes from the i th set, right.
+So, this number is you just multiple the cardinality of the sets together; this is what, right.
+So, this is the generalized product principle.
+So we can consider a more interesting question about numbers to illustrate this point.
+For any positive integer k the number of k digit positive integers is 9 into 10 raise to k minus 1.
+So, what do you mean here? So, you are interested in K-digit positive integers, right.
+So, there are how many one-digit positive integers? There are nine of them; of course zero is not a positive integer, so 1 to 9, right, so 9 are there.
+How many two-digit positive integers are there? So, it should be something like this, right, some x here some y here.
+This x comes from because zero is not allowed here; x comes from the set 1, 2 up to 9, zero is not allowed as the first digit, right.
+Y comes from the set 0, 1, 2, 9, so there are nine choices for this and ten choices for this.
+So, total x, y can be formed nine into ten 90 ways, so 90 two digit positive integers which is you can shift starting from 10 to 99, right.
+And now if you want to talk about k digit it is something like this k digits this position.
+So, this is x 1, this is x 2 and this is x k, right.
+This x 1 can take values form 1 to 9 and this can take values from 0 to 9, this can take values from 0 to 9.
+So, here nine possibilities are there for this thing.
+So this, say, we have x 1 equal to see the x 1 equal to 9 here because this first position can take values from nine different possible values.
+So, this is x 1 as this set, okay, 1 to 9 and similarly x 2 where this small x 2 can take values from that has ten possible values and similarly x k has ten possible values namely 0 to 9, right.
+So, therefore this is the number into 10; that is 9 into 10 raise to k minus 1, this is it, okay.
+Next how many four digit positive integers both start and end in even numbers.
+This is another question which we can both start and end in even numbers, right.
+So, now we are talking about four digit positive numbers, say, it will be four digits.
+The first position can take values from, say, x 1.
+So this x 1, now our zero is not allowed here, zero is not allowed; possible values are 1, 2, no four digit positive integers it should start with even number, right, start with even.
+So, that means we cannot use zero, so it can be a 2, 4, 6 or 8, right.
+There are four possible values here for this position.
+Now the second position will get all the ten possible values namely x 2; x two is the set corresponding to the second question that is 0 to 9, all the ten possible values it can take and x 3 which correspond to the set of values which this third position can take that is 0 to 9, right.
+So, ten values here possible and then this last position is again even but now we can take zero also, right, x 4; x 4 is the possible values this last portion can take; that is 0, 2, 4, 6, 8.
+There are five possible values and the total number of possible values is 4 into 10 into 10 into 5, right.
+So this is the way we can.
+So, they are the numbers which start and end at even numbers.
+So, here we are applying the product rule.
+So, what we are doing is for each position we are setting up a set say X i, i th position correspond to the x i; x i in the sense that that is the set of numbers which can come in that position, right, and now we are counting the tuple, say, a 1, a 2, a 3, a 4 like with a i corresponding to the digit that I th position will take, right.
+Then we know that the cardinalities by multiplying these things together; that is all we are doing.
+Of course these are all extremely so easy intuitive things but we just mention it for the sake of completeness.
+Now here is another question; suppose that a password contains only digits from 0 to 9.
+Also number of digits should be at least 4 and utmost 7.
+How many passwords can be formed? Password when I say password, it is something like a password which we use for ATM cards, so only using numbers.
+So, that means you can use numbers 0, 1, 2 up to 9, right, and this is no more a positive integer or anything, so you can start a password with zero, no problem.
+So, that means a four digit password you can form; you are not allowed to form one digit password because it is too easy to break probably.
+So you can form a two digit password three digit; sorry you are not allowed to form a two digit password, you are not allowed to form a three digit password, you are allowed to form a four digit password, you are allowed to form five digit password and then six or seven digit passwords are also allowed, not more than that; so, then the password may become too big, right.
+So, how many such passwords can be made? Here how do we do this thing? So, here this four digit password can be like this; this position can come from a set x 1, so how many possibilities? Nine possibilities, right.
+Similarly this can come from a set x 2, this also has nine possibilities and this can come from a set x 3, this also has nine possibilities.
+This also can come from a set x 4, this also has nine possibilities, sorry not nine, so ten possibilities, I am sorry, everything is ten because zero to nine is ten, so ten possibilities.
+Therefore, 10 raise to 4 possibilities for a four digit password.
+Similarly, a five digit password will have 10 raise to 5 possibilities because there are five positions; each position can be filled in 10 base each.
+So, similarly the six digit passwords can be formed in 10 raise to 6 ways and the seven digit passwords can be formed in 10 raise to 7 ways.
+Here we are using addition principle; first we use the product principle to form these things, this 10 raise to 4, 10 raise to 5, how many four digit passwords are there? This is answered using the product principle, how many five digit passwords are there.
+So, this is answered using the product principle generalized product principle we can say, right, because five times we are using that and similarly these are all done and finally we are adding them together because we know that if four digit password a set of four digit passwords is disjoint form the set of five digit passwords and so on.
+So, we can add them up together, so that is what we can get, right.
+So, we are using addition principle as well as product principle there together.
+So, here is some more sophisticated question.
+Suppose that a password contains five digits does not start with zero and contains the digit 8, then how many possibilities are there? Now we are illustrating these principles how these principles, product principles, subtraction principle, addition principle, how are they used separately or how are they used together; I mean apply one and then and other and like that, right, so in combination, right.
+So, this is what we are trying to see.
+See these examples are selected to illustrate that; like in the last a problem we show that addition principle and the product principle is use to count the number of passwords.
+Here this question says it contains a password containing five digits, how many are there? 10 raise to 5 are there as you know but then we also want to make sure that it does not start with the zero.
+So, then also we can count, so that means the first position can be filled in nine different ways and remaining four positions can be filled in ten ways.
+So, 9 into 10 into 10 into 10 into 10, so that is the possible number of passwords which five digit password which starts with zero.
+But then we also know that we also want to make sure that the password should contain digit eight, how many possibilities are there? So, how will we do this thing? So, when we know eight digits the digit 8 is present.
+So, we do not know where? It can be in first position, it can be in the second position, it can be in the third position, so we are talking about the five digit passwords; five digit passwords which does contain the digit 8 but does not start with 0, right.
+So, this is the five digits.
+Somewhere the 8 should come; that is the problem.
+We have to make sure that 8 is present somewhere.
+So, one way probably used to do that okay, suppose 8 comes here, now how many ways you can fill this thing? So, there are ten ways of filling this thing, ten ways of filling this thing, ten ways of filling this thing.
+So, you multiply this out you get a number, then you say that here it comes.
+So, there are ten ways of filling it and then so same number, right.
+So, like that can you add up all these things using addition principle and get the answer.
+So, here it is 8 into 10 raise to 4.
+So, if I do it five times 8 into 10 raise to 4 because assuming that 8 can be here, 8 can be here, 8 can be here, any of the places right.
+So, can I add them up together? Now this is not correct because you know the addition principle can be applied only if these sets are disjoints.
+For instance the set of passwords which have 8 in the first position is it disjoint from the set of passwords which have 8 in the second position, not necessarily.
+So, there can be a password of the form 8 8 and something here, right, say 6 5 4.
+This password has 8 in the first position, 8 in the second position also.
+So, in both such set it comes.
+So, therefore those sets are not disjoint; therefore, when you want to count the total number of passwords we cannot add them up.
+So, there are some intersections to minus off.
+So, it becomes a little complicated, how do you do this thing? So, we can deal with it using more slightly more sophisticated techniques but as of now so we have an easier method namely using the subtraction principle.
+So we will first note that the number of passwords, so if we do not have that 8 restriction; that means the digit 8 should be present, you just forget it.
+The number of passwords which does not start with zero, so that can be easily counted because there are nine ways of filling this.
+So, there are ten ways of filling it, ten ways here, ten ways here and ten ways, right.
+So, it is 9 into 10 raise to 4.
+The only thing is to minus of those passwords which does not have any 8; I mean you can subtract those passwords which does not start with a 0 and does not have any 8 that is easy to count, how? Because this is such passwords are five digits.
+Here the first position can get anything other than 0 and 8; that means eight possibilities here anything other than zero and eight.
+That is 1,2,3,4,5,6,7,9 here but nine possibilities; out of the ten possible digits zero to nine, we cannot give 8 here.
+Similarly here also nine possibilities, here also nine possibilities, here also nine possibilities; now we can subtract these bad passwords.
+These are passwords which are having the first digit nonzero but not having any 8 anywhere; those passwords are not allowed because we should have at least one 8.
+So, this is the total number of passwords which were nonzero at the first digit and these passwords we counted here will definitely be a subset of that; therefore, we can apply subtraction principle.
+So, that a minus b formula; so a minus b is what we want to find now, right.
+So, we just minus it off 8 into 9 raise to 4 and will get an answer, right.
+So, we just have to evaluate it and we will get the answer, right; it is a different way of doing it.
+So, what we did is here we used the product principle and also the subtraction principle.
+It was like sometimes you may spend more time trying to work with the addition principle and we will see we cannot directly use it and then we will have to do some more sophisticated things there.
+So, rather subtraction principle was helping there.
+So, though these principles are very simple intuitive still right in problems it can be helpful for instance.
+So, if we keep this this in mind there is another way of doing it, right.
+So, that is why these principles are stated.
+Now find the number of positive integers, okay, and this we have seen.
+And this we have k-digit positive integers, how may four digit positive integers? Yeah, this is the next one for any positive integer n.
+So, now we have studied three kind of counting principle namely addition principle, second subtraction principle, then third product principle.
+So, before going in to the next thing namely the division principle we will just consider some very simple things which we already known, like for a positive integer n the number of ways to arrange all elements of the set 1 to n in a line is n factorial.
+This we have already studied in your eleventh and twelve standards.
+So, this is what we mean is so for instance 1, 2, right.
+So, we can arrange it in 2, 1 also.
+This is 2 factorial; 2 factorial is 2 into 1, right.
+Similarly, if you say 1, 2, 3, so this you can arrange in 1, 3 these ways it can be 1, 2, 3; 1, 3, 2, it can be 2, 1, 3, it can be 2, 3, 1, it can be 3, 1, 2; 3, 2, 1.
+So, there are six possible ways of doing it, right.
+So, this is actually 3 factorial 3 into 2 into 1.
+So, there are six possible ways of listing ordering the elements of the set 1, 2, 3, right.
+So, in principle if you are given the set 1, 2, n, right, there are n factorial ways of doing that because if you want to see this thing.
+So, we just think of fielding the position, there are n positions.
+The first position can be filled in n ways.
+So, any of these things can come there.
+So, once if you give a number here, then the second number can be any of the remaining n minus 1 thing.
+It can be whichever number goes here we do not know which number but whichever it is after that there are only n minus one possibility here, right, exactly n minus one possibility.
+So, after you give one number here, one number here, then two numbers will go from here, then there are n minus 2 possibilities here.
+And then after three numbers are gone from here then we have n minus 3 possibilities to fill this thing here and after four numbers goes from here there are n minus 4 possibilities to fill it here.
+So, like that finally we will have just one possibility here, right.
+This add up to n into n possibility here into n minus 1 into, so n minus 2 into, so into 1.
+So, this is n factorial; that is what we just mentioned, right.
+And next notion we have to remember is that of a permutation, what do you mean by the permutation of a finite set s? It is a list of the elements of S containing each element of S exactly once, right.
+So like one to n.
+So you will list it but then you should not list like 1 2 1 3 4 3 like this because you should not repeat things, right.
+So, if you use 1 then you are not supposed to use it again.
+So, you can say 1 then another one 3, then you should not use 3 again so 4 2, this is okay 5.
+It is a listing of 1 to 5, right, without repeating but everything has come once, right, exactly once, right.
+The length of the S will always be n, right, and every member of 1 to n will appear once.
+Such a list is called permutation.
+So how many permutations can be there? We have already seen that it is n factorial, fine.
+Now the next notion is of making a partial list like there are n elements, out of that k be a positive integers where k is utmost 10, then the number of ways to make k element list from n without repeating any element is n choose k n into n minus, sorry not n choose k, it is called n p k, right, and that is the old books have a different notation.
+Let us now look at them.
+Here I have written as n k, so the old book will also write n p k; sometimes I prefer to use this thing because it reminds you that this is the permutation.
+So, here what we are trying to do is we have n things like that, say, 1, 2 up to n and we have to select k out of it, k is a smaller number than n, smaller or equal but it is a partial list in the sense that we do not need all the n things to be listed some k things to be listed from this thing, right.
+The property of the list is that you should not repeat elements, right.
+You have to take from the set we should not repeat; for instance you can 1, 2, 3, 4, 5.
+Let us say n equal to 5, now put k equal to 3, how many ways you can take list it.
+For instance I can start with 1, 2, 3, then I can start with 1, 3, 2, right, then I can start with 1, 4, 5 and 1, 5, 4, then I can do 1, 2, 4,; 1, 4, 2, right.
+So, like that I can keep on going or I can start with 2 and then 2, 1, 3; 2, 1, 4; 2, 1, 5, like this I can list, right.
+These are all possible ways of listing three things using these from these five things, in the list nothing repeats.
+These three things are taken from this thing without repetition, in how many ways you can do that? So, it is easy to count like we did earlier.
+There are k positions we have to fill, the first position can be filled in n ways, any of these n things can come there.
+The second position can be filled in n minus 1 ways because one thing is already allotted to this square, right, only n minus one things are left and the third position can be filled in n minus 2 ways and so on and the k th position can be filled in n minus k plus 1 ways, right; that is k th position because this is n position n minus 0.
+This is n minus 1 the second position is n minus 1, third position is n minus 2; that is n minus 3 plus 1.
+So, the k th position will be n minus k plus 1, right.
+So, this is the number of ways.
+So, here our answer will be 5 P 3, also written as 5 3, so that is 5 into 4 into 3, right, here n is 5 n minus 1 4.
+So, up to where we will go n minus 3 plus 1; that is n minus 2, this is up to here; that is here 5 into 4 into 3.
+We know that we will have three terms here, right, n p k will have k term, start with n and k terms we count; that is what we do, right, that is this is this notation.
+Now let us say S and T be finite sets and let d be a fixed positive integer.
+We say that a function f from T to S is d-to-one if for each element s element of S there exist exactly d elements t net d elements t form T such that f of t is equal to s.
+So, what do you mean? So, we are about something called, so we are talking about a function from T to S if you are interested in some kind of type of function called d-to-one functions.
+So, there are members of S and there are members of T.
+Now this goes somewhere, so for everything is mapped to something; a function means everything in the set will have an image here, right, and nothing here will have more than one image this kind of what is the function, what is the relation, you are suppose to preview this thing in any of the elementary books and now here so like this, right.
+Now this is the point of view of the function from this side.
+So, everything will have an image here and nothing here will have more than one image but from here you can have several preimages, right.
+So, now when I talk of a d-to-one function, so this is T, this is S.
+So, looking from S every member of S should get d preimages here, preimages d, T things in T in these set should map to the same, exactly details.
+Similarly, for everything should be like that.
+So, I have taken d equal to 3 here, so like this, d equal to 3, right.
+Now such a function is called d-to-one function.
+So, here we have one-to-one functions when d equal to 1; that would mean that when you take T and S, there is a mapping like this, right, everything here will have one preimage.
+So, everything here will have only one image always but what we are defining is based on what this members of s c, right, how many preimages it has, right.
+If it is exactly one preimage, then it is a one-to-one function; if it is exactly d preimage, then its d-to-one function like that.
+So, now here is the divisional principle.
+Suppose there are two sets T and S such that we have this t-to-one function here something like this, right, t-to-one functions here and now if we count the cardinality of this, if you know this is S, say, S is equal to some number k, then we also know how many are there in T.
+T will be equal to k into d, right, or k equal to T by d, this is what the divisional principle says; one will wonder what is so big about it.
+There is nothing big about it.
+So, suppose for a party several families attended a party and then each family brought two children with them.
+So, now if somebody wants to count the families what probably they can do is to count the children, right, and say they found that there are 100 children then they can immediately infer that there are 50 families 100 by 2 because here T is the set of children, S is the set of families, right, and then you know, say, every child belongs to one family but then from the family point of view there are two children associated to them, right; children are nothing to family but every family has two children associated with them, that is why this is a d color two case, right.
+So, we can divide the cardinality of T by d to get the cardinality of S, right, or if we know the family the number of families then we can get T by multiplying that.
+So, this is the division principle.
+So, we will just consider a simple problem to illustrate this principle.
+The number of different seating arrangements for n people around a circular table is n minus 1 factorial, so that is study this in detail.
+So, we have a circular table say this is.
+So, we want to arrange people around the circular table, how many seating arrangements are there, how many ways they can arrange? So, for instance is this is first person 1, 2, this is one possible arrangement 4, 5, 6, 7, 8, 9, nine people are arranged like that.
+Now you see if I had arranged the people, so that one is here, so this is here 1, 2 is the earlier one.
+Now instead of this thing if I say 1 is here and then 2 is here, 3 is here, 4 is here, 5 is here and 6, 7, 8, 9 and this is not different from this thing.
+The circular arrangement is just like the table is this entire thing is rotated a little bit, that is alright, this 1 came here, 2 came here, 3 came here, 4 came here and so on, right.
+This is not a different configuration at all, right.
+Suppose I consider like that, of course one can insist that that is a different configuration.
+Suppose if I do not find any difference between them.
+So, in case it can be rotated and got the same position, right.
+So, that way 1, 2, 3, 4, 5, 6, 7, 8, 9, this position would not be different from even this.
+So, this position for instance if I write like this so if I write something like starting from here 1, 2, 3, 4, 5, 6, 7, 8, 9, so it is by rotating one all the way here, right, that is how it happened but on the other hand we will consider that the reverse rotation; for instance suppose if I am writing this one 1, 2, 3, 4, 5, 6, 7, 8, 9, this is considered different, this is our choice in fact; one may wonder why do you think like when I rotate it to the clockwise direction it was considered same but when I rotated, rotate means when I flicked it, right.
+So, this also in some sense is similar but there are some subtle differences here.
+For instance if I look that if my criteria of deciding which is whether something is same or not was by looking at my left neighbor.
+So, I can define that two configurations are same if my left neighbor, the left neighbor of everyone is same, here it is like that.
+For instance the left neighbor means the neighbor, so for instance if I am standing here, so this is my left neighbor, right, or may be neighbor in the clockwise sense, right; clockwise sense is always same.
+So, whichever way I rotate in this direction, so it does not matter.
+So, my right neighbor will remain same for everyone but here it is not like that.
+Earlier 2 was my clockwise neighbor, so right and left is little confusing; let us say clockwise and anticlockwise neighbor.
+So, earlier the anticlockwise neighbor was 2, now it is clock, sorry clockwise neighbor was 2.
+Now it is anticlockwise neighbor, right.
+So, there is a difference here in some sense, right.
+So, therefore we are defining that two seating arrangements are similar same if for every one sitting the clockwise neighbor remains same.
+The positioning does not matter.
+So, that is how we define these things.
+Then how many different arrangements are there, this is the question? One way to attack this thing is to note that so for instance like we can try to set up a function t-to-one function from T to S here, then what is T? So, suppose we give numbers to the chairs, right, in the seating arrangement we give, say, this is chair number 1, this is chair number 2, chair number 9, then every time we shift a person the arrangement will look different because on the chair number 1 who sits it is different this time, then earlier the person number 1 was sitting on chair number 1.
+Now the person number 1 has gone and sat in chair number 2; though it was just a rotation, still we can think that it is different.
+So, if these chairs are numbered then it does not matter whether we make them sit in a circular way or straight line, right, because this is the first chair, second chair that is all we mean, right, 9 chairs.
+So, this comes back to our permutation problem if there are n chair that is n factorial possible ways, right.
+Now let us say all these n factorial possible ways are placed in t.
+Now the question is if the chair numbers were not there, so one of the seating positions arrangements, right, would have correspondent to how many of these listings? This is the question.
+So, for instance this was 1, 2, 3, 9, right.
+So, here this would have gone in the listing this would correspond to 1, 2, 3, 9 but then when I rotate it, so this 1 came here, 2 came here, 3 came here.
+So, now this will be another so when I read out the number of chairs though without chair numbers this is same but if the chair number was there we could have written it like 9, 1, 2, 3 up to 8, right.
+Similarly, when one more rotation is done so the 8 will come here, right, 8, 9, 1, 2, 3, 7 like that, then we have 7, 8, 9 up to 6.
+So, like that we can rotate it nine times here, right, n times we can rotate it.
+We can start with 1, so we can start with 9, we can start with 8, we can start with finally 2 also, right, 2, 3, 4 like in 9 and 1 will come here.
+So, this 1 will go all the way first here, second here, third here, like that finally it will come here, right.
+But when the chair numbers are not there, all these things corresponds to the same seating arrangement.
+We cannot distinguish between them because the clockwise neighbor’s always remains same in any of these seating arrangements; just that it looks different only because we assign certain numbers to the chairs and when they moved we noticed that actually the person who is sitting in this particular chair number is different now but once the chair number is deleted we cannot even identify which was the arrangement, right.
+So, this we can see as T as the number of arrangements with chair numbers; that means the linear arrangements and this S has the kind of configurations we want to count when the rotations does not matter, right, after rotating we still say that this is the same configuration.
+So, that means one configuration here will correspond to exactly n different configurations here.
+Here this will be n and so on, right, n and so on, right.
+So, d equal to n here, right.
+So, we should also notice that whatever this gives and the things which will arise; linear arrangements will arise from different configuration will be totally different, right.
+We will after all to make it we have to.
+So, here if by rotating 1, 2, 3, 4, 9, and say by rotating 1, 3, 2, 4, this will be always different because left the clockwise neighbor is different here, so there also it we will be different, so there at least for one of the members it was different here, so in the linear arrangement also it will reflect, right, the clockwise the guy who is next there.
+So therefore, they will all be different.
+So therefore, we can see that here we have a function which is n-to-one from this to this; that means each member of S is seeing n preimages, so the cardinality of t we know now already.
+That was easier for us to count that was n factorial we already know it and then d is equal to n, then that means this is n factorial by n, that will becomes n minus 1 factorial.
+This will be the size of this S; that means the configuration we want to count namely the configurations where the rotations does not make a difference; that means configurations where we say that two configurations are same when everyone seated has the same clockwise neighbors, right, those will be n minus 1 factorial where this was an application of the division principle, right.
+The next question we want to consider is let n be a positive integer and k less to equal to n be a non-negative integer, then the number of all k elements subsets of n is n into n minus 1 to up to n minus k plus 1 by k factorial.
+So, here finally we are coming to the question of counting the number of k subsets of k element subsets of n element set one-to-n, how many are there? The notation to denote this number is n this is like this its n c k; remember the other one was n k here, this is n c k.
+So, we have old notation was n p k.
+So, here we have n c k, right.
+Now what was this thing? So, we are talking about how many ways how many subsets k elements subsets we can take from n, there is a difference here.
+For instance the earlier examples of 1, 2, 3, 5 for n equal to 5, so when we listed down the number of possible ways of making three lists without repetitions, right.
+So, that was we counted 1, 2, 3, then we told 1, 3, 2, then we told 1, 4, 3; 1, 3, 4, all these things were there but this 1, 3, 2 and 1, 2, 3 will be only one subset; that is 1, 3, 2.
+There is no difference between these two configurations when we are thinking of subsets, right, three elements subsets only 1, 3, 2 here, right, this two will not be there.
+So, even actually from this thing we can get six different configurations when we count this number, right.
+For instance it can be 1, 2, 3; 1, 3, 2; it can be 2, 3, 2; 2, 3, 1; 2, 1, 3 or it can be 3, 2, 1; 3, 1, 2, six different possibilities are there but here it is only one possible possibilities; that is the main difference here.
+So, this is the number of possible subsets.
+Here also to do this thing we will show that this number is actually n into n minus 1 into n minus k plus 1 divided by k factorial, right.
+Here also again we will use the division principle, how do we do? We will set up a set T, we will set up a set S and then here this T will correspond to the number n k namely all list of k things taken from n things without repetition, right, but their orders matters, right, this many will be there and now here is the actual things we want to count namely the subsets.
+Now you ask one subset, how many of these things correspond to it.
+Of course if you give me 1, 2, 3 as a subset, I know that this can give rise to six different things here, right; that is what we were telling, right, six different things here, right.
+So, similarly is it a k subset k factorial is a different thing.
+So, this I will explain in the next class more carefully.
+Thank you.

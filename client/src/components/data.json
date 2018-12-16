@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "NPTEL 1",
+    "author": "L. Sunil Chandran",
+    "url": "https://www.youtube.com/watch?v=3FaUGOHe188&start=",
+    "toc": [
+      {
+        "heading": "COMBINATORICS- Lecture: 1",
+        "timestamp": 12
+      },
+      {
+        "heading": "Some examples",
+        "timestamp": 732
+      },
+      {
+        "heading": "Any subset of size",
+        "timestamp": 2610
+      },
+      {
+        "heading": "Any subset Of size",
+        "timestamp": 3017
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "NPTEL 2",
+    "author": "Sharan G." ,
+    "url":"https://www.youtube.com/watch?v=T5NmRUqO418&start=",
+    "toc": [
+      {
+        "heading": "Subtraction Principle",
+        "timestamp": 140
+      },
+      {
+        "heading": "Find the number of positive integers",
+        "timestamp": 271
+      },
+      {
+        "heading": "Product Principle",
+        "timestamp": 493
+      },
+      {
+        "heading": "A permutation Of a finite set",
+        "timestamp": 1957
+      },
+      {
+        "heading": "Let S and T be finite sets",
+        "timestamp": 2280
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "NPTEL 3",
+    "author": "Siddhant Nayyar" ,
+    "url": "https://www.youtube.com/watch?v=Vc2KqHQKDNs&start=",
+    "toc": [
+      {
+        "heading": "Example: Signed integer",
+        "timestamp": 777
+      },
+      {
+        "heading": "Which Representation is Better?",
+        "timestamp": 982
+      },
+      {
+        "heading": "Example: IEEE Single Float",
+        "timestamp": 1680
+      },
+      {
+        "heading": "Basic Computer Organisation",
+        "timestamp": 2640
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "NPTEL 4",
+    "author": "Prof. S." ,
+    "url": "https://www.youtube.com/watch?v=dYMCwxgl3vk&index=4&list=PLYihddLF-CgYuWNL55Wg8ALkm6u8U7gps&start=",
+    "toc": [
+      {
+        "heading": "Foundations of Machine Learning",
+        "timestamp": 37
+      },
+      {
+        "heading": "Inductive learning",
+        "timestamp": 1620
+      },
+      {
+        "heading": "Some more Types of Inductive Bias",
+        "timestamp": 1702
+      }
+    ]
+  }
+]
